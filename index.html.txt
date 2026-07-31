@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice 4 Fun - Fresh & Healthy Juices</title>
+    <!-- Tailwind CSS for modern design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        juiceGreen: '#78bc28',
+                        juiceRed: '#e31b23',
+                        juiceDark: '#1a1a1a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Logo representation -->
+                <div class="bg-juiceGreen text-white font-black text-xl px-3 py-1 rounded-lg tracking-wider shadow">
+                    JUICE <span class="text-juiceRed bg-white px-1 rounded">4</span> FUN
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6 font-semibold">
+                <a href="#home" class="hover:text-juiceGreen transition">Home</a>
+                <a href="#menu" class="hover:text-juiceGreen transition">Our Juices</a>
+                <a href="#about" class="hover:text-juiceGreen transition">About Us</a>
+                <a href="#contact" class="hover:text-juiceGreen transition">Contact</a>
+            </nav>
+            <div>
+                <a href="#menu" class="bg-juiceGreen hover:bg-lime-600 text-white font-bold px-5 py-2 rounded-full shadow-lg transition">
+                    Order Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-juiceDark via-zinc-900 to-juiceDark text-white py-20 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <span class="bg-juiceRed text-white text-sm font-bold px-3 py-1 rounded-full uppercase tracking-wider">100% Fresh & Organic</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                    Refresh Your Soul With <span class="text-juiceGreen">Juice 4 Fun!</span>
+                </h1>
+                <p class="text-gray-300 text-lg">
+                    Experience the ultimate burst of natural flavors. Handcrafted fresh from farm-picked strawberries, citrus, and tropical fruits just for you.
+                </p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#menu" class="bg-juiceGreen hover:bg-lime-600 text-white font-bold px-8 py-3 rounded-full shadow-xl transition transform hover:-translate-y-1">
+                        Explore Menu
+                    </a>
+                    <a href="#about" class="border-2 border-white hover:bg-white hover:text-black font-bold px-8 py-3 rounded-full transition">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="relative w-72 h-72 md:w-96 md:h-96 bg-juiceGreen rounded-full flex items-center justify-center shadow-2xl animate-pulse">
+                    <div class="absolute inset-4 bg-juiceRed rounded-full flex items-center justify-center text-center p-6 shadow-inner">
+                        <div>
+                            <i class="fa-solid fa-glass-water-droplet text-6xl text-white mb-2"></i>
+                            <h2 class="text-3xl font-black text-white">JUICE 4 FUN</h2>
+                            <p class="text-lime-200 text-sm mt-1">Pure Taste, Pure Energy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-black text-gray-900">Our Special <span class="text-juiceGreen">Juices</span></h2>
+            <p class="text-gray-600 mt-2">Pick your favorite flavor and kickstart your day with health.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Item 1 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition">
+                <div class="bg-red-500 h-48 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-stroopwafel text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold">Strawberry Blast</h3>
+                        <span class="text-juiceRed font-extrabold text-lg">$4.99</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Loaded with fresh farm strawberries, a dash of lime, and natural sweetness.</p>
+                    <button onclick="alert('Added Strawberry Blast to cart!')" class="w-full bg-juiceGreen hover:bg-lime-600 text-white font-bold py-2 rounded-xl transition">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition">
+                <div class="bg-amber-500 h-48 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-lemon text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold">Tropical Sunshine</h3>
+                        <span class="text-juiceRed font-extrabold text-lg">$5.49</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">A refreshing mix of orange, pineapple, and tropical punch to boost immunity.</p>
+                    <button onclick="alert('Added Tropical Sunshine to cart!')" class="w-full bg-juiceGreen hover:bg-lime-600 text-white font-bold py-2 rounded-xl transition">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition">
+                <div class="bg-emerald-600 h-48 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-seedling text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold">Green Detox</h3>
+                        <span class="text-juiceRed font-extrabold text-lg">$5.99</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Cleanse your system with green apple, spinach, cucumber, and mint leaves.</p>
+                    <button onclick="alert('Added Green Detox to cart!')" class="w-full bg-juiceGreen hover:bg-lime-600 text-white font-bold py-2 rounded-xl transition">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-100 py-16 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-black mb-4">Why Choose <span class="text-juiceGreen">Juice 4 Fun?</span></h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    We believe that healthy living should be fun and delicious! Every bottle of Juice 4 Fun is packed with essential vitamins, minerals, and 100% natural ingredients with zero preservatives.
+                </p>
+                <ul class="space-y-3 font-semibold">
+                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check text-juiceGreen mr-3"></i> 100% Fresh Organic Ingredients</li>
+                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check text-juiceGreen mr-3"></i> No Added Sugar or Preservatives</li>
+                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check text-juiceGreen mr-3"></i> Cold-pressed to retain maximum nutrients</li>
+                </ul>
+            </div>
+            <div class="bg-juiceGreen p-8 rounded-3xl text-white shadow-xl">
+                <h3 class="text-2xl font-bold mb-4">Visit Our Store or Order Online</h3>
+                <p class="mb-6">Get your favorite juice delivered straight to your doorstep within 30 minutes!</p>
+                <div class="space-y-2">
+                    <p><i class="fa-solid fa-location-dot mr-2"></i> 123 Juice Street, Fresh City</p>
+                    <p><i class="fa-solid fa-phone mr-2"></i> +1 (555) 123-4567</p>
+                    <p><i class="fa-solid fa-envelope mr-2"></i> support@juice4fun.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-juiceDark text-white py-8 px-4 text-center">
+        <div class="max-w-7xl mx-auto space-y-4">
+            <h2 class="text-2xl font-black tracking-wider">JUICE <span class="text-juiceRed">4</span> FUN</h2>
+            <p class="text-gray-400 text-sm">© 2026 Juice 4 Fun. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 text-xl">
+                <a href="#" class="hover:text-juiceGreen transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-juiceGreen transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-juiceGreen transition"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
