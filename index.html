@@ -22,53 +22,68 @@
         }
     </script>
 </head>
-<body class="bg-[#f0fae6] text-gray-800 font-sans antialiased">
+<body class="bg-[#fafff5] text-gray-800 font-sans antialiased selection:bg-juiceBrightGreen selection:text-white">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-juiceGreen text-white text-xs md:text-sm font-medium py-2 px-4 text-center">
-        <span><i class="fa-solid fa-location-dot mr-1"></i> LG Floor, Carrefour, LuckyOne Mall, Karachi</span>
-        <span class="mx-2 hidden md:inline">|</span>
-        <span class="block md:inline mt-1 md:mt-0"><i class="fa-solid fa-clock mr-1"></i> Opens Daily at 11:00 AM</span>
-    </div>
-
-    <!-- Navbar -->
-    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <!-- Navbar (Matched style with reference site) -->
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
+            <!-- Logo -->
             <div class="flex items-center">
-                <a href="#home" class="flex items-center gap-2">
-                    <img src="logo.png" alt="Juice 4 Fun Logo" class="h-10 md:h-12 w-auto object-contain">
+                <a href="#home" class="flex items-center">
+                    <img src="logo.png" alt="Juice 4 Fun Logo" class="h-9 md:h-11 w-auto object-contain">
                 </a>
             </div>
-            <nav class="hidden md:flex space-x-8 font-semibold text-gray-700">
-                <a href="#home" class="hover:text-juiceGreen transition">Home</a>
-                <a href="#menu" class="hover:text-juiceGreen transition">Our Juices</a>
-                <a href="#about" class="hover:text-juiceGreen transition">About Us</a>
-                <a href="#location" class="hover:text-juiceGreen transition">Location</a>
+
+            <!-- Nav Links -->
+            <nav class="hidden lg:flex space-x-8 font-medium text-gray-700 text-sm">
+                <a href="#home" class="hover:text-juiceGreen transition">Beverages</a>
+                <a href="#menu" class="hover:text-juiceGreen transition">Find a Store</a>
+                <a href="#about" class="hover:text-juiceGreen transition">Franchise</a>
+                <a href="#about" class="hover:text-juiceGreen transition">Blog</a>
                 <a href="#contact" class="hover:text-juiceGreen transition">Contact</a>
+                <a href="#menu" class="hover:text-juiceGreen transition">Bundle Products</a>
             </nav>
-            <div>
-                <a href="tel:03362457409" class="bg-juiceRed hover:bg-red-700 text-white font-bold px-5 py-2.5 rounded-full shadow-lg transition transform hover:-translate-y-0.5 text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-phone"></i> Call Order
-                </a>
+
+            <!-- Right Action Icons & Call Button -->
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <button onclick="alert('Search feature coming soon!')" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-700 transition">
+                    <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                </button>
+                <button onclick="alert('User profile coming soon!')" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-700 transition hidden sm:flex">
+                    <i class="fa-regular fa-user text-sm"></i>
+                </button>
+                <button onclick="alert('Cart is empty!')" class="w-10 h-10 rounded-full bg-amber-500 hover:bg-amber-600 flex items-center justify-center text-white transition shadow-md relative">
+                    <i class="fa-solid fa-cart-shopping text-sm"></i>
+                    <span class="absolute -top-1 -right-1 bg-juiceRed text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section matching the banner style -->
-    <section id="home" class="relative bg-gradient-to-b from-[#e3f5cf] via-[#ebfae1] to-[#f0fae6] py-16 md:py-24 px-4 overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
-            <div class="space-y-6 text-center md:text-left">
-                <div class="inline-flex items-center gap-2 bg-red-100 border border-red-200 text-juiceRed text-xs md:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
+    <!-- Hero Section (Reference Style with Background Giant Text & Product Mockup) -->
+    <section id="home" class="relative bg-gradient-to-b from-[#f2fde8] via-[#f7fef0] to-[#fafff5] pt-12 pb-20 md:py-24 px-4 overflow-hidden">
+        
+        <!-- Giant Background Watermark Text (Like "GREEN JUICE" style) -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-0">
+            <span class="text-[14vw] lg:text-[12vw] font-black uppercase tracking-wider text-juiceBrightGreen opacity-15 whitespace-nowrap">
+                STRAWBERRY FUN
+            </span>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Left Text Content -->
+            <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 bg-pink-100 border border-pink-200 text-juiceRed text-xs md:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
                     <i class="fa-solid fa-heart"></i> Fresh Looks. Fun Tastes.
                 </div>
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-gray-900">
-                    Refresh Your Soul With <span class="text-juiceGreen">Juice 4 Fun!</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-gray-900">
+                    A Refreshing Blend Of <span class="text-juiceRed">Strawberry</span> & Sweetness.
                 </h1>
-                <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-                    Experience the ultimate burst of natural strawberry & fruit flavors. Handcrafted fresh to give you pure energy at LuckyOne Mall, Karachi.
+                <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    Experience the ultimate burst of natural fruit flavors, handcrafted fresh to give you pure energy at LuckyOne Mall, Karachi.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-2">
-                    <a href="#menu" class="bg-juiceRed hover:bg-red-700 text-white font-bold px-8 py-3.5 rounded-full shadow-xl shadow-red-500/20 transition transform hover:-translate-y-1 text-center">
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2">
+                    <a href="#menu" class="bg-juiceBrightGreen hover:bg-green-600 text-white font-bold px-8 py-3.5 rounded-full shadow-lg shadow-green-500/20 transition transform hover:-translate-y-0.5 text-center">
                         Shop Now
                     </a>
                     <a href="#location" class="border-2 border-juiceGreen hover:bg-juiceGreen hover:text-white text-juiceGreen font-bold px-8 py-3.5 rounded-full transition text-center">
@@ -77,29 +92,29 @@
                 </div>
             </div>
             
-            <!-- Clean Image Card Container -->
-            <div class="flex justify-center">
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-juiceRed to-juiceBrightGreen rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
-                    <div class="relative bg-white p-4 rounded-3xl border border-gray-100 shadow-2xl">
-                        <img src="juice-cup.png" alt="Juice 4 Fun Signature Cup" class="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 object-cover rounded-2xl transform transition duration-500 hover:scale-[1.02]">
+            <!-- Right Clean Image Card Container matching banner mockup style -->
+            <div class="lg:col-span-6 flex justify-center">
+                <div class="relative group w-full max-w-md">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-juiceRed to-juiceBrightGreen rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative bg-white p-3 rounded-3xl border border-gray-100 shadow-2xl">
+                        <img src="juice-cup.png" alt="Juice 4 Fun Signature Cup" class="w-full h-80 sm:h-96 object-cover rounded-2xl">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Menu Section -->
+    <!-- Menu / Beverages Section -->
     <section id="menu" class="py-20 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <span class="text-juiceRed font-bold uppercase tracking-widest text-sm">Taste The Quality</span>
-            <h2 class="text-3xl md:text-5xl font-black text-gray-900 mt-1">Our Special <span class="text-juiceRed">Juices</span></h2>
+            <h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-1">Our Featured <span class="text-juiceRed">Beverages</span></h2>
             <p class="text-gray-600 mt-3 max-w-lg mx-auto">Pick your favorite flavor, packed with vitamins and minerals to kickstart your day.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Item 1 -->
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1.5 flex flex-col">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
                 <div class="bg-gradient-to-br from-red-500 to-rose-600 h-52 flex items-center justify-center text-white relative overflow-hidden">
                     <i class="fa-solid fa-glass-water-droplet text-6xl drop-shadow-lg relative z-10"></i>
                     <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full">Bestseller</span>
@@ -111,13 +126,13 @@
                     </div>
                     <p class="text-gray-600 text-sm mb-6 flex-grow">Loaded with fresh farm strawberries, a dash of lime, and natural sweetness.</p>
                     <button onclick="alert('Strawberry Blast added to cart!')" class="w-full bg-juiceGreen hover:bg-green-800 text-white font-bold py-3 rounded-2xl shadow-md transition duration-200">
-                        Order Now
+                        Add To Cart
                     </button>
                 </div>
             </div>
 
             <!-- Item 2 -->
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1.5 flex flex-col">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
                 <div class="bg-gradient-to-br from-amber-500 to-orange-600 h-52 flex items-center justify-center text-white relative overflow-hidden">
                     <i class="fa-solid fa-lemon text-6xl drop-shadow-lg relative z-10"></i>
                     <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full">Refreshing</span>
@@ -129,13 +144,13 @@
                     </div>
                     <p class="text-gray-600 text-sm mb-6 flex-grow">A refreshing mix of orange, pineapple, and tropical punch to boost immunity.</p>
                     <button onclick="alert('Tropical Sunshine added to cart!')" class="w-full bg-juiceGreen hover:bg-green-800 text-white font-bold py-3 rounded-2xl shadow-md transition duration-200">
-                        Order Now
+                        Add To Cart
                     </button>
                 </div>
             </div>
 
             <!-- Item 3 -->
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1.5 flex flex-col">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
                 <div class="bg-gradient-to-br from-emerald-600 to-teal-700 h-52 flex items-center justify-center text-white relative overflow-hidden">
                     <i class="fa-solid fa-seedling text-6xl drop-shadow-lg relative z-10"></i>
                     <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full">Healthy Choice</span>
@@ -147,7 +162,7 @@
                     </div>
                     <p class="text-gray-600 text-sm mb-6 flex-grow">Cleanse your system with green apple, spinach, cucumber, and mint leaves.</p>
                     <button onclick="alert('Green Detox added to cart!')" class="w-full bg-juiceGreen hover:bg-green-800 text-white font-bold py-3 rounded-2xl shadow-md transition duration-200">
-                        Order Now
+                        Add To Cart
                     </button>
                 </div>
             </div>
@@ -164,9 +179,9 @@
                     We believe that healthy living should be fun and delicious! Located right in the heart of Karachi at LuckyOne Mall, every bottle and glass at Juice 4 Fun is packed with essential vitamins, minerals, and 100% natural ingredients with zero preservatives.
                 </p>
                 <ul class="space-y-3 font-semibold">
-                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check-circle text-juiceGreen mr-3 text-lg"></i> 100% Fresh Organic Ingredients</li>
-                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check-circle text-juiceGreen mr-3 text-lg"></i> No Added Sugar or Artificial Preservatives</li>
-                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check-circle text-juiceGreen mr-3 text-lg"></i> Cold-pressed to retain maximum nutrients</li>
+                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check-circle text-juiceBrightGreen mr-3 text-lg"></i> 100% Fresh Organic Ingredients</li>
+                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check-circle text-juiceBrightGreen mr-3 text-lg"></i> No Added Sugar or Artificial Preservatives</li>
+                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check-circle text-juiceBrightGreen mr-3 text-lg"></i> Cold-pressed to retain maximum nutrients</li>
                 </ul>
 
                 <div class="bg-gradient-to-r from-juiceGreen to-emerald-800 p-6 rounded-3xl text-white shadow-xl mt-6">
@@ -226,9 +241,9 @@
             <div class="flex flex-col items-center md:items-end space-y-3">
                 <p class="font-bold text-white text-sm">Connect With Us</p>
                 <div class="flex space-x-4 text-xl">
-                    <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-juiceRed hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-juiceRed hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-juiceRed hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-juiceBrightGreen hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-juiceBrightGreen hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-juiceBrightGreen hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
