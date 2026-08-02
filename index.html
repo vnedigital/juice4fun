@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juice 4 Fun - Fresh & Healthy Juices</title>
-    <!-- Tailwind CSS for modern design -->
+    <title>Juice 4 Fun - Fresh & Healthy Juices | LuckyOne Mall Karachi</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -13,6 +13,7 @@
                 extend: {
                     colors: {
                         juiceGreen: '#78bc28',
+                        juiceLime: '#84cc16',
                         juiceRed: '#e31b23',
                         juiceDark: '#1a1a1a',
                     }
@@ -21,18 +22,24 @@
         }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-[#f4faec] text-gray-800 font-sans antialiased">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-juiceGreen text-white text-xs md:text-sm font-medium py-2 px-4 text-center">
+        <span><i class="fa-solid fa-location-dot mr-1"></i> LG Floor, Carrefour, LuckyOne Mall, Karachi</span>
+        <span class="mx-2 hidden md:inline">|</span>
+        <span class="block md:inline mt-1 md:mt-0"><i class="fa-solid fa-clock mr-1"></i> Opens Daily at 11:00 AM</span>
+    </div>
 
     <!-- Navbar -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <!-- Real Logo Image -->
-                <a href="#home">
-                    <img src="logo.png" alt="Juice 4 Fun Logo" class="h-10 w-auto object-contain">
+                <a href="#home" class="flex items-center gap-2">
+                    <img src="logo.png" alt="Juice 4 Fun Logo" class="h-10 md:h-12 w-auto object-contain">
                 </a>
             </div>
-            <nav class="hidden md:flex space-x-6 font-semibold">
+            <nav class="hidden md:flex space-x-8 font-semibold text-gray-700">
                 <a href="#home" class="hover:text-juiceGreen transition">Home</a>
                 <a href="#menu" class="hover:text-juiceGreen transition">Our Juices</a>
                 <a href="#about" class="hover:text-juiceGreen transition">About Us</a>
@@ -40,136 +47,160 @@
                 <a href="#contact" class="hover:text-juiceGreen transition">Contact</a>
             </nav>
             <div>
-                <a href="#menu" class="bg-juiceGreen hover:bg-lime-600 text-white font-bold px-5 py-2 rounded-full shadow-lg transition">
-                    Order Now
+                <a href="tel:03362457409" class="bg-juiceGreen hover:bg-lime-600 text-white font-bold px-5 py-2.5 rounded-full shadow-lg transition transform hover:-translate-y-0.5 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call Order
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="bg-gradient-to-r from-juiceDark via-zinc-900 to-juiceDark text-white py-20 px-4">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <!-- Hero Section matching the fresh green theme -->
+    <section id="home" class="relative bg-gradient-to-b from-[#eaf6d9] via-[#f0fae3] to-[#f4faec] py-16 md:py-24 px-4 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
             <div class="space-y-6 text-center md:text-left">
-                <span class="bg-juiceRed text-white text-sm font-bold px-3 py-1 rounded-full uppercase tracking-wider">100% Fresh & Organic</span>
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                <div class="inline-flex items-center gap-2 bg-red-100 border border-red-200 text-juiceRed text-xs md:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
+                    <i class="fa-solid fa-leaf"></i> 100% Fresh & Organic
+                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-gray-900">
                     Refresh Your Soul With <span class="text-juiceGreen">Juice 4 Fun!</span>
                 </h1>
-                <p class="text-gray-300 text-lg">
-                    Experience the ultimate burst of natural flavors. Handcrafted fresh from farm-picked strawberries, citrus, and tropical fruits just for you.
+                <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+                    A Refreshing Blend Of Apple, Grapefruit And Lemon. Handcrafted fresh to give you the ultimate burst of natural energy at LuckyOne Mall.
                 </p>
-                <div class="flex justify-center md:justify-start space-x-4">
-                    <a href="#menu" class="bg-juiceGreen hover:bg-lime-600 text-white font-bold px-8 py-3 rounded-full shadow-xl transition transform hover:-translate-y-1">
-                        Explore Menu
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-2">
+                    <a href="#menu" class="bg-juiceGreen hover:bg-lime-600 text-white font-bold px-8 py-3.5 rounded-full shadow-xl shadow-juiceGreen/20 transition transform hover:-translate-y-1 text-center">
+                        Shop Now
                     </a>
-                    <a href="#about" class="border-2 border-white hover:bg-white hover:text-black font-bold px-8 py-3 rounded-full transition">
-                        Learn More
+                    <a href="#location" class="border-2 border-juiceGreen hover:bg-juiceGreen hover:text-white text-juiceGreen font-bold px-8 py-3.5 rounded-full transition text-center">
+                        Find Store
                     </a>
                 </div>
             </div>
-            <!-- Improved Image Card Container -->
+            
+            <!-- Clean Image Card Container -->
             <div class="flex justify-center">
-                <div class="bg-zinc-800/80 p-4 rounded-3xl border border-zinc-700 shadow-2xl backdrop-blur-sm">
-                    <img src="juice-cup.png" alt="Juice 4 Fun Cup" class="w-72 h-72 md:w-80 md:h-80 object-cover rounded-2xl">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-juiceGreen to-lime-400 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <div class="relative bg-white p-4 rounded-3xl border border-gray-100 shadow-2xl">
+                        <img src="juice-cup.png" alt="Juice 4 Fun Signature Cup" class="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 object-cover rounded-2xl transform transition duration-500 hover:scale-[1.02]">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-16 px-4 max-w-7xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-black text-gray-900">Our Special <span class="text-juiceGreen">Juices</span></h2>
-            <p class="text-gray-600 mt-2">Pick your favorite flavor and kickstart your day with health.</p>
+    <section id="menu" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-juiceGreen font-bold uppercase tracking-widest text-sm">Taste The Quality</span>
+            <h2 class="text-3xl md:text-5xl font-black text-gray-900 mt-1">Our Special <span class="text-juiceGreen">Juices</span></h2>
+            <p class="text-gray-600 mt-3 max-w-lg mx-auto">Pick your favorite flavor, packed with vitamins and minerals to kickstart your day.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Item 1 -->
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition">
-                <div class="bg-red-500 h-48 flex items-center justify-center text-white">
-                    <i class="fa-solid fa-stroopwafel text-6xl"></i>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1.5 flex flex-col">
+                <div class="bg-gradient-to-br from-red-500 to-rose-600 h-52 flex items-center justify-center text-white relative overflow-hidden">
+                    <i class="fa-solid fa-glass-water-droplet text-6xl drop-shadow-lg relative z-10"></i>
+                    <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full">Bestseller</span>
                 </div>
-                <div class="p-6">
+                <div class="p-7 flex flex-col flex-grow">
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xl font-bold">Strawberry Blast</h3>
-                        <span class="text-juiceRed font-extrabold text-lg">$4.99</span>
+                        <h3 class="text-xl font-extrabold text-gray-900">Strawberry Blast</h3>
+                        <span class="text-juiceRed font-black text-lg">Rs. 450</span>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4">Loaded with fresh farm strawberries, a dash of lime, and natural sweetness.</p>
-                    <button onclick="alert('Added Strawberry Blast to cart!')" class="w-full bg-juiceGreen hover:bg-lime-600 text-white font-bold py-2 rounded-xl transition">
-                        Add to Cart
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Loaded with fresh farm strawberries, a dash of lime, and natural sweetness.</p>
+                    <button onclick="alert('Strawberry Blast added to cart!')" class="w-full bg-juiceGreen hover:bg-lime-600 text-white font-bold py-3 rounded-2xl shadow-md transition duration-200">
+                        Order Now
                     </button>
                 </div>
             </div>
 
             <!-- Item 2 -->
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition">
-                <div class="bg-amber-500 h-48 flex items-center justify-center text-white">
-                    <i class="fa-solid fa-lemon text-6xl"></i>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1.5 flex flex-col">
+                <div class="bg-gradient-to-br from-amber-500 to-orange-600 h-52 flex items-center justify-center text-white relative overflow-hidden">
+                    <i class="fa-solid fa-lemon text-6xl drop-shadow-lg relative z-10"></i>
+                    <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full">Refreshing</span>
                 </div>
-                <div class="p-6">
+                <div class="p-7 flex flex-col flex-grow">
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xl font-bold">Tropical Sunshine</h3>
-                        <span class="text-juiceRed font-extrabold text-lg">$5.49</span>
+                        <h3 class="text-xl font-extrabold text-gray-900">Tropical Sunshine</h3>
+                        <span class="text-juiceRed font-black text-lg">Rs. 400</span>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4">A refreshing mix of orange, pineapple, and tropical punch to boost immunity.</p>
-                    <button onclick="alert('Added Tropical Sunshine to cart!')" class="w-full bg-juiceGreen hover:bg-lime-600 text-white font-bold py-2 rounded-xl transition">
-                        Add to Cart
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">A refreshing mix of orange, pineapple, and tropical punch to boost immunity.</p>
+                    <button onclick="alert('Tropical Sunshine added to cart!')" class="w-full bg-juiceGreen hover:bg-lime-600 text-white font-bold py-3 rounded-2xl shadow-md transition duration-200">
+                        Order Now
                     </button>
                 </div>
             </div>
 
             <!-- Item 3 -->
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition">
-                <div class="bg-emerald-600 h-48 flex items-center justify-center text-white">
-                    <i class="fa-solid fa-seedling text-6xl"></i>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1.5 flex flex-col">
+                <div class="bg-gradient-to-br from-emerald-600 to-teal-700 h-52 flex items-center justify-center text-white relative overflow-hidden">
+                    <i class="fa-solid fa-seedling text-6xl drop-shadow-lg relative z-10"></i>
+                    <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full">Healthy Choice</span>
                 </div>
-                <div class="p-6">
+                <div class="p-7 flex flex-col flex-grow">
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-xl font-bold">Green Detox</h3>
-                        <span class="text-juiceRed font-extrabold text-lg">$5.99</span>
+                        <h3 class="text-xl font-extrabold text-gray-900">Green Detox</h3>
+                        <span class="text-juiceRed font-black text-lg">Rs. 500</span>
                     </div>
-                    <p class="text-gray-600 text-sm mb-4">Cleanse your system with green apple, spinach, cucumber, and mint leaves.</p>
-                    <button onclick="alert('Added Green Detox to cart!')" class="w-full bg-juiceGreen hover:bg-lime-600 text-white font-bold py-2 rounded-xl transition">
-                        Add to Cart
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">Cleanse your system with green apple, spinach, cucumber, and mint leaves.</p>
+                    <button onclick="alert('Green Detox added to cart!')" class="w-full bg-juiceGreen hover:bg-lime-600 text-white font-bold py-3 rounded-2xl shadow-md transition duration-200">
+                        Order Now
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section & Store Photo -->
-    <section id="about" class="bg-gray-100 py-16 px-4">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl md:text-4xl font-black mb-4">Why Choose <span class="text-juiceGreen">Juice 4 Fun?</span></h2>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    We believe that healthy living should be fun and delicious! Every bottle of Juice 4 Fun is packed with essential vitamins, minerals, and 100% natural ingredients with zero preservatives.
+    <!-- About Section & Store Showcase -->
+    <section id="about" class="bg-white py-20 px-4 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-juiceGreen font-bold uppercase tracking-widest text-sm">Our Philosophy</span>
+                <h2 class="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Why Choose <span class="text-juiceGreen">Juice 4 Fun?</span></h2>
+                <p class="text-gray-600 leading-relaxed">
+                    We believe that healthy living should be fun and delicious! Located right in the heart of Karachi at LuckyOne Mall, every bottle and glass at Juice 4 Fun is packed with essential vitamins, minerals, and 100% natural ingredients with zero preservatives.
                 </p>
-                <ul class="space-y-3 font-semibold mb-6">
-                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check text-juiceGreen mr-3"></i> 100% Fresh Organic Ingredients</li>
-                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check text-juiceGreen mr-3"></i> No Added Sugar or Preservatives</li>
-                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check text-juiceGreen mr-3"></i> Cold-pressed to retain maximum nutrients</li>
+                <ul class="space-y-3 font-semibold">
+                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check-circle text-juiceGreen mr-3 text-lg"></i> 100% Fresh Organic Ingredients</li>
+                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check-circle text-juiceGreen mr-3 text-lg"></i> No Added Sugar or Artificial Preservatives</li>
+                    <li class="flex items-center text-gray-700"><i class="fa-solid fa-check-circle text-juiceGreen mr-3 text-lg"></i> Cold-pressed to retain maximum nutrients</li>
                 </ul>
-                <div class="bg-juiceGreen p-6 rounded-2xl text-white shadow-lg">
-                    <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-store mr-2"></i> Visit Our LuckyOne Mall Store</h3>
-                    <p class="text-sm">LG Floor, Carrefour, LuckyOne Mall, Federal B Area Block 21, Gulberg Town, Karachi</p>
-                    <p class="text-sm mt-2"><i class="fa-solid fa-phone mr-2"></i> 0336 2457409 | <i class="fa-solid fa-clock mr-1"></i> Opens Daily at 11:00 AM</p>
+
+                <div class="bg-gradient-to-r from-juiceGreen to-lime-600 p-6 rounded-3xl text-white shadow-xl mt-6">
+                    <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fa-solid fa-store"></i> Visit Our LuckyOne Mall Store</h3>
+                    <p class="text-sm opacity-90">LG Floor, Carrefour, LuckyOne Mall, Federal B Area Block 21, Gulberg Town, Karachi</p>
+                    <div class="mt-4 pt-4 border-t border-white/20 flex flex-wrap gap-4 text-sm font-semibold">
+                        <span><i class="fa-solid fa-phone mr-1"></i> 0336 2457409</span>
+                        <span><i class="fa-solid fa-clock mr-1"></i> 11:00 AM Onwards</span>
+                    </div>
                 </div>
             </div>
-            <!-- Shop Real Photo -->
-            <div class="bg-white p-3 rounded-3xl shadow-xl overflow-hidden border border-gray-200">
-                <img src="shop.jpg" alt="Juice 4 Fun Counter at LuckyOne Mall" class="rounded-2xl w-full h-[400px] object-cover">
+
+            <!-- Real Store Photo Showcase Card -->
+            <div class="relative">
+                <div class="absolute -inset-2 bg-juiceGreen/10 rounded-3xl blur-xl"></div>
+                <div class="relative bg-white p-3 rounded-3xl shadow-2xl overflow-hidden border border-gray-200">
+                    <img src="shop.jpg" alt="Juice 4 Fun Counter at LuckyOne Mall" class="rounded-2xl w-full h-[420px] object-cover hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-6 left-6 right-6 bg-black/70 backdrop-blur-md p-4 rounded-2xl text-white">
+                        <p class="text-xs text-juiceGreen font-bold uppercase">Live Store View</p>
+                        <h4 class="font-extrabold text-lg">Carrefour, LG Floor, LuckyOne Mall</h4>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Location & Google Map Section -->
-    <section id="location" class="py-16 px-4 max-w-7xl mx-auto">
-        <div class="text-center mb-8">
-            <h2 class="text-3xl md:text-4xl font-black text-gray-900">Find Us On <span class="text-juiceGreen">Google Maps</span></h2>
-            <p class="text-gray-600 mt-2">Visit us directly at LuckyOne Mall Karachi!</p>
+    <section id="location" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-juiceGreen font-bold uppercase tracking-widest text-sm">Find Us Easily</span>
+            <h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-1">Our Store <span class="text-juiceGreen">Location</span></h2>
+            <p class="text-gray-600 mt-2">Drop by our juice bar at LuckyOne Mall for a refreshing break while shopping!</p>
         </div>
-        <div class="w-full h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+        <div class="w-full h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
             <iframe 
                 class="w-full h-full border-0"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.152431610444!2d67.0860868!3d24.9268884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f32a76f251d%3A0x6b4fb24e889b7b9f!2sLuckyOne%20Mall!5e0!3m2!1sen!2spk!4v1700000000000!5m2!1sen!2spk" 
@@ -181,16 +212,28 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-juiceDark text-white py-8 px-4 text-center">
-        <div class="max-w-7xl mx-auto space-y-4 flex flex-col items-center">
-            <!-- Footer Logo Image -->
-            <img src="logo.png" alt="Juice 4 Fun Logo" class="h-12 w-auto object-contain mb-2">
-            <p class="text-gray-400 text-sm">© 2026 Juice 4 Fun. All rights reserved.</p>
-            <div class="flex justify-center space-x-6 text-xl">
-                <a href="#" class="hover:text-juiceGreen transition"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="hover:text-juiceGreen transition"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="hover:text-juiceGreen transition"><i class="fa-brands fa-twitter"></i></a>
+    <footer id="contact" class="bg-juiceDark text-white py-12 px-4 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+            <div class="flex flex-col items-center md:items-start">
+                <img src="logo.png" alt="Juice 4 Fun Logo" class="h-12 w-auto object-contain mb-3">
+                <p class="text-gray-400 text-sm">Refreshing your soul with pure, cold-pressed fruit goodness every single day.</p>
             </div>
+            <div class="space-y-2 text-sm text-gray-300">
+                <p class="font-bold text-white text-base mb-1">Contact Info</p>
+                <p><i class="fa-solid fa-phone text-juiceGreen mr-2"></i> 0336 2457409</p>
+                <p><i class="fa-solid fa-location-dot text-juiceGreen mr-2"></i> LuckyOne Mall, Karachi</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end space-y-3">
+                <p class="font-bold text-white text-sm">Connect With Us</p>
+                <div class="flex space-x-4 text-xl">
+                    <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-juiceGreen hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-juiceGreen hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-juiceGreen hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-zinc-800 text-center text-gray-500 text-xs">
+            © 2026 Juice 4 Fun. All rights reserved. Built with passion.
         </div>
     </footer>
 
