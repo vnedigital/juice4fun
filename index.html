@@ -22,7 +22,7 @@
         }
     </script>
 </head>
-<body class="bg-[#f0fae6] text-gray-800 font-sans antialiased selection:bg-juiceBrightGreen selection:text-white">
+<body class="bg-[#f2fae8] text-gray-800 font-sans antialiased selection:bg-juiceBrightGreen selection:text-white overflow-x-hidden">
 
     <!-- Navbar -->
     <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all">
@@ -60,10 +60,18 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative bg-gradient-to-b from-[#e3f5cf] via-[#ebfae1] to-[#f0fae6] pt-12 pb-20 md:py-24 px-4 overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-            <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+    <!-- Hero Section (Realistic Style) -->
+    <section id="home" class="relative bg-gradient-to-b from-[#e5f7cc] via-[#eefaeb] to-[#f2fae8] pt-12 pb-24 px-4 overflow-hidden min-h-[85vh] flex items-center">
+        
+        <!-- Big Background Typography Effect (Behind Glass like reference) -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden opacity-15">
+            <span class="text-[18vw] font-black uppercase tracking-tighter text-juiceBrightGreen whitespace-nowrap">JUICE 4 FUN</span>
+        </div>
+
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            
+            <!-- Left Content -->
+            <div class="lg:col-span-5 space-y-6 text-center lg:text-left">
                 <div class="inline-flex items-center gap-2 bg-red-100 border border-red-200 text-juiceRed text-xs md:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
                     <i class="fa-solid fa-heart"></i> Fresh Looks. - Fun Tastes.
                 </div>
@@ -83,11 +91,23 @@
                 </div>
             </div>
             
-            <div class="lg:col-span-6 flex justify-center">
-                <div class="relative w-full max-w-md flex justify-center items-center">
-                    <img src="juice-cup.png" alt="Juice 4 Fun Signature Glass" class="w-full h-auto object-contain [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)] drop-shadow-2xl">
+            <!-- Right Realistic Glass & Floating Fruits Showcase -->
+            <div class="lg:col-span-7 relative flex justify-center items-center py-6">
+                <!-- Floating Decorative Fruits/Splash Elements -->
+                <div class="absolute -top-4 left-6 md:left-12 w-16 h-16 md:w-20 md:h-20 animate-bounce duration-1000 opacity-90 drop-shadow-lg">
+                    <div class="w-full h-full bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-inner">🍓</div>
+                </div>
+                <div class="absolute bottom-2 right-4 md:right-12 w-14 h-14 md:w-16 md:h-16 animate-pulse opacity-90 drop-shadow-lg">
+                    <div class="w-full h-full bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xs">🍓</div>
+                </div>
+
+                <!-- Main Glass Image with Pro Glow and Drop Shadow -->
+                <div class="relative w-full max-w-lg flex justify-center items-center">
+                    <div class="absolute inset-0 bg-juiceBrightGreen/20 rounded-full filter blur-3xl transform scale-75"></div>
+                    <img src="juice-cup.png" alt="Juice 4 Fun Signature Glass" class="relative w-full max-w-[480px] h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.25)] transform hover:scale-105 transition duration-500">
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -103,7 +123,7 @@
             <!-- Item 1: DryFruits & Nuts -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
                 <div class="bg-black h-52 flex items-center justify-center text-white relative overflow-hidden">
-                    <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Popular</span>
+                    <span class="absolute top-4 right-4 bg-white/25 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Popular</span>
                     <img src="dryfruits.jpg" alt="DryFruits & Nuts" class="w-full h-full object-cover">
                 </div>
                 <div class="p-7 flex flex-col flex-grow">
@@ -124,7 +144,7 @@
             <!-- Item 2: Mix Berries -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
                 <div class="bg-black h-52 flex items-center justify-center text-white relative overflow-hidden">
-                    <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Special</span>
+                    <span class="absolute top-4 right-4 bg-white/25 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Special</span>
                     <img src="berries.jpg" alt="Mix Berries" class="w-full h-full object-cover">
                 </div>
                 <div class="p-7 flex flex-col flex-grow">
@@ -145,7 +165,7 @@
             <!-- Item 3: Protein Scoop -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
                 <div class="bg-black h-52 flex items-center justify-center text-white relative overflow-hidden">
-                    <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Fitness</span>
+                    <span class="absolute top-4 right-4 bg-white/25 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Fitness</span>
                     <img src="protein.jpg" alt="Protein Scoop" class="w-full h-full object-cover">
                 </div>
                 <div class="p-7 flex flex-col flex-grow">
@@ -166,7 +186,7 @@
             <!-- Item 4: Banana Juice -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
                 <div class="bg-black h-52 flex items-center justify-center text-white relative overflow-hidden">
-                    <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Classic</span>
+                    <span class="absolute top-4 right-4 bg-white/25 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Classic</span>
                     <img src="banana.jpg" alt="Banana Juice" class="w-full h-full object-cover">
                 </div>
                 <div class="p-7 flex flex-col flex-grow">
@@ -187,7 +207,7 @@
             <!-- Item 5: Oats with Chia -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
                 <div class="bg-black h-52 flex items-center justify-center text-white relative overflow-hidden">
-                    <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Healthy</span>
+                    <span class="absolute top-4 right-4 bg-white/25 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Healthy</span>
                     <img src="oats.jpg" alt="Oats with Chia" class="w-full h-full object-cover">
                 </div>
                 <div class="p-7 flex flex-col flex-grow">
@@ -208,7 +228,7 @@
             <!-- Item 6: Grapefruits -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
                 <div class="bg-black h-52 flex items-center justify-center text-white relative overflow-hidden">
-                    <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Refreshing</span>
+                    <span class="absolute top-4 right-4 bg-white/25 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Refreshing</span>
                     <img src="grapefruits.jpg" alt="Grapefruits" class="w-full h-full object-cover">
                 </div>
                 <div class="p-7 flex flex-col flex-grow">
@@ -229,7 +249,7 @@
             <!-- Item 7: Orange Juice -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
                 <div class="bg-black h-52 flex items-center justify-center text-white relative overflow-hidden">
-                    <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Vitamin C</span>
+                    <span class="absolute top-4 right-4 bg-white/25 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Vitamin C</span>
                     <img src="orange.jpg" alt="Orange Juice" class="w-full h-full object-cover">
                 </div>
                 <div class="p-7 flex flex-col flex-grow">
@@ -250,7 +270,7 @@
             <!-- Item 8: Sweet Grapes -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 flex flex-col">
                 <div class="bg-black h-52 flex items-center justify-center text-white relative overflow-hidden">
-                    <span class="absolute top-4 right-4 bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Sweet</span>
+                    <span class="absolute top-4 right-4 bg-white/25 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full z-10">Sweet</span>
                     <img src="grapes.jpg" alt="Sweet Grapes" class="w-full h-full object-cover">
                 </div>
                 <div class="p-7 flex flex-col flex-grow">
