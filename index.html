@@ -401,7 +401,6 @@
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <h3 class="text-xl font-black flex items-center gap-2"><i class="fa-solid fa-store text-juiceRed"></i> Shahrah-e-Faisal</h3>
-                                <span class="bg-juiceRed text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider shadow-md">Popular</span>
                             </div>
                             <p class="text-sm opacity-90 leading-relaxed font-light">Near PSO Pump, Main Shahrah-e-Faisal, Karachi</p>
                         </div>
@@ -423,47 +422,68 @@
                 <h2 class="text-2xl md:text-3xl font-black mt-3">Leave a Quick Feedback</h2>
                 <p class="text-xs text-emerald-200 mt-1">Tell us about your experience at Juice 4 Fun!</p>
             </div>
-            <form onsubmit="event.preventDefault(); alert('Thank you for your valuable feedback!');" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <input type="text" placeholder="Your Name" required class="bg-white/20 border border-emerald-600 rounded-xl px-4 py-3 text-sm text-white placeholder-emerald-200 focus:outline-none focus:border-juiceRed">
-                    <input type="email" placeholder="Your Email / Phone" required class="bg-white/20 border border-emerald-600 rounded-xl px-4 py-3 text-sm text-white placeholder-emerald-200 focus:outline-none focus:border-juiceRed">
+            <form onsubmit="event.preventDefault(); alert('Thank you for your feedback!');">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-xs font-bold mb-1">Your Name</label>
+                        <input type="text" required class="w-full bg-white/10 border border-emerald-600 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-juiceRed" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold mb-1">Branch Visited</label>
+                        <select class="w-full bg-gray-900 border border-emerald-600 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-juiceRed">
+                            <option>LuckyOne Mall</option>
+                            <option>Shahrah-e-Faisal</option>
+                        </select>
+                    </div>
                 </div>
-                <textarea rows="3" placeholder="Write your feedback here..." required class="w-full bg-white/20 border border-emerald-600 rounded-xl px-4 py-3 text-sm text-white placeholder-emerald-200 focus:outline-none focus:border-juiceRed"></textarea>
-                <button type="submit" class="w-full bg-juiceRed hover:bg-red-600 text-white font-bold py-3 rounded-xl uppercase tracking-wider text-sm transition shadow-lg">Submit Feedback</button>
+                <div class="mb-4">
+                    <label class="block text-xs font-bold mb-1">Your Message / Review</label>
+                    <textarea rows="3" required class="w-full bg-white/10 border border-emerald-600 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-juiceRed" placeholder="How was your juice?"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-juiceRed hover:bg-red-600 text-white font-black py-3 rounded-xl text-xs uppercase tracking-widest transition shadow-lg">Submit Feedback</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-juiceDark text-white py-14 px-4 border-t border-zinc-800">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center text-center md:text-left">
-            <div class="flex flex-col items-center md:items-start">
-                <img src="logo.png" alt="Juice 4 Fun Logo" class="h-12 w-auto object-contain mb-3 brightness-200 drop-shadow">
-                <p class="text-gray-400 text-xs leading-relaxed">Fresh Looks. Fun Tastes. Refreshing your mind and body every single day.</p>
+    <footer id="contact" class="bg-[#121212] text-gray-400 py-16 px-4 border-t border-emerald-950">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+            <!-- Brand Info -->
+            <div class="space-y-4">
+                <img src="logo.png" alt="Juice 4 Fun Logo" class="h-10 w-auto object-contain filter brightness-0 invert">
+                <p class="text-xs text-gray-400 leading-relaxed">Fresh Looks. Fun Tastes. Refreshing your mind and body every single day.</p>
             </div>
-            <div class="space-y-2 text-sm text-gray-400">
-                <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-3">Quick Links</h4>
-                <p><a href="#home" class="hover:text-juiceRed transition">Home</a></p>
-                <p><a href="#menu" class="hover:text-juiceRed transition">Menu</a></p>
-                <p><a href="#about" class="hover:text-juiceRed transition">About Us</a></p>
-                <p><a href="#location" class="hover:text-juiceRed transition">Stores</a></p>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-white text-xs font-black uppercase tracking-wider mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-xs font-medium">
+                    <li><a href="#home" class="hover:text-juiceRed transition">Home</a></li>
+                    <li><a href="#menu" class="hover:text-juiceRed transition">Menu</a></li>
+                    <li><a href="#about" class="hover:text-juiceRed transition">About Us</a></li>
+                    <li><a href="#location" class="hover:text-juiceRed transition">Stores</a></li>
+                </ul>
             </div>
-            <div class="space-y-2 text-sm text-gray-400">
-                <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-3">Get in Touch</h4>
-                <p><i class="fa-solid fa-phone text-juiceRed mr-2"></i> 0322 9211605 / 0336 2457409</p>
-                <p><i class="fa-solid fa-envelope text-juiceRed mr-2"></i> info@juice4fun.com</p>
-                <p><i class="fa-solid fa-location-dot text-juiceRed mr-2"></i> LuckyOne Mall, Karachi, Pakistan</p>
+
+            <!-- Get in Touch -->
+            <div>
+                <h4 class="text-white text-xs font-black uppercase tracking-wider mb-4">Get In Touch</h4>
+                <ul class="space-y-3 text-xs">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-juiceRed"></i> 0322 9211605 / 0336 2457409</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-juiceRed"></i> info@juice4fun.com</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-juiceRed"></i> LuckyOne Mall, Karachi, Pakistan</li>
+                </ul>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-zinc-800 text-center text-xs text-gray-500">
-            &copy; 2026 Juice 4 Fun (LLP). All Rights Reserved. Registered with SECP & Sindh Food Authority.
         </div>
     </footer>
 
     <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true,
+            offset: 50
+        });
     </script>
 </body>
 </html>
