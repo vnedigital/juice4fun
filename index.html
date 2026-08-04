@@ -28,7 +28,7 @@
 <body class="bg-gradient-to-br from-emerald-50 via-lime-50 to-amber-50 text-gray-800 font-sans antialiased selection:bg-juiceRed selection:text-white overflow-x-hidden">
 
     <!-- Navbar -->
-    <header class="bg-white/80 backdrop-blur-xl shadow-lg sticky top-0 z-50 border-b border-emerald-100 transition-all">
+    <header class="bg-white/85 backdrop-blur-xl shadow-lg sticky top-0 z-50 border-b border-emerald-100 transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <!-- Logo -->
             <div class="flex items-center">
@@ -38,11 +38,13 @@
             </div>
 
             <!-- Nav Links -->
-            <nav class="hidden lg:flex space-x-8 font-bold text-gray-700 text-sm tracking-wide">
+            <nav class="hidden lg:flex space-x-6 font-bold text-gray-700 text-xs tracking-wider">
                 <a href="#home" class="hover:text-juiceRed transition">HOME</a>
-                <a href="#menu" class="hover:text-juiceRed transition">BEVERAGES</a>
+                <a href="#menu" class="hover:text-juiceRed transition">MENU</a>
+                <a href="#about" class="hover:text-juiceRed transition">ABOUT & STORY</a>
+                <a href="#team" class="hover:text-juiceRed transition">MANAGEMENT</a>
+                <a href="#compliance" class="hover:text-juiceRed transition">CERTIFICATES</a>
                 <a href="#location" class="hover:text-juiceRed transition">STORES</a>
-                <a href="#about" class="hover:text-juiceRed transition">ABOUT</a>
                 <a href="#contact" class="hover:text-juiceRed transition">CONTACT</a>
             </nav>
 
@@ -57,14 +59,15 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden bg-cover bg-center shadow-inner" style="background-image: url('juice-cup.png');">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pointer-events-none"></div>
         
-        <div class="absolute bottom-12 z-10 text-center px-4" data-aos="fade-up" data-aos-duration="1000">
+        <div class="absolute bottom-12 z-10 text-center px-4 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+            <span class="bg-juiceRed text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest inline-block mb-3 shadow-lg">100% Pure & Natural</span>
             <h1 class="text-4xl md:text-6xl font-black text-white drop-shadow-lg mb-4">Fresh Looks. <span class="text-juiceRed">Fun Tastes.</span></h1>
-            <p class="text-white/90 text-sm md:text-base max-w-xl mx-auto mb-6 drop-shadow">Experience the ultimate burst of energy with 100% pure, freshly blended fruit juices in Karachi.</p>
+            <p class="text-white/90 text-sm md:text-base max-w-xl mx-auto mb-6 drop-shadow">Experience the ultimate burst of energy with 100% pure, freshly blended fruit juices, smoothies, and healthy beverages in Karachi[cite: 1].</p>
             <div class="flex justify-center gap-4">
                 <a href="#menu" class="bg-juiceRed hover:bg-red-700 text-white font-black px-8 py-4 rounded-full shadow-2xl transition transform hover:scale-105 text-sm uppercase tracking-wider">
-                    Order Now
+                    Explore Menu
                 </a>
                 <a href="#location" class="bg-white/90 backdrop-blur-md hover:bg-white text-juiceGreen font-black px-8 py-4 rounded-full shadow-2xl transition text-sm uppercase tracking-wider">
                     Our Stores
@@ -73,183 +76,198 @@
         </div>
     </section>
 
-    <!-- Menu / Beverages Section -->
+    <!-- Menu Section (Categorized) -->
     <section id="menu" class="py-24 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-16" data-aos="fade-down" data-aos-duration="800">
             <span class="bg-juiceRed/10 text-juiceRed font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full border border-juiceRed/20">Refreshing Menu</span>
-            <h2 class="text-3xl md:text-5xl font-black text-gray-900 mt-4">Pick Your Favorite <span class="text-juiceRed">Flavor</span></h2>
-            <p class="text-gray-600 mt-3 max-w-lg mx-auto text-sm md:text-base">Loaded with pure minerals, vitamins, and zero artificial syrups.</p>
+            <h2 class="text-3xl md:text-5xl font-black text-gray-900 mt-4">Our Complete <span class="text-juiceRed">Beverage Selection</span></h2>
+            <p class="text-gray-600 mt-3 max-w-lg mx-auto text-sm md:text-base">Loaded with pure minerals, vitamins, and zero artificial syrups[cite: 1].</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Item 1 -->
-            <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-emerald-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col group" data-aos="fade-up" data-aos-delay="100">
-                <div class="h-52 overflow-hidden relative bg-gray-900">
-                    <span class="absolute top-4 right-4 bg-juiceRed text-white text-[10px] font-black px-3 py-1 rounded-full z-10 shadow-md uppercase tracking-wider">Popular</span>
-                    <img src="dryfruits.jpg" alt="DryFruits & Nuts" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-lg font-black text-gray-900 mb-1">DryFruits & Nuts</h3>
-                    <p class="text-xs text-gray-500 mb-4">Fresh blend of premium nuts & dry fruits</p>
-                    <div class="flex justify-between items-center mb-6 mt-auto bg-emerald-50/80 p-3 rounded-2xl border border-emerald-100">
-                        <span class="text-xs font-bold text-gray-600">S: <span class="text-juiceRed font-black">Rs 450</span></span>
-                        <span class="text-xs font-bold text-gray-600">L: <span class="text-juiceRed font-black">Rs 950</span></span>
+        <!-- 1. Veggie Juices -->
+        <div class="mb-14">
+            <h3 class="text-2xl font-black text-juiceGreen mb-6 border-b-2 border-emerald-200 pb-2 flex items-center gap-2">
+                <i class="fa-solid fa-carrot text-juiceRed"></i> Veggie Juices
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- ABC -->
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-emerald-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-black text-gray-900">ABC</h4>
+                            <span class="bg-juiceRed/10 text-juiceRed text-xs font-bold px-2.5 py-1 rounded-full">Fresh</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4">Apple Beetroot Carrot[cite: 1]</p>
                     </div>
-                    <button onclick="alert('DryFruits & Nuts added!')" class="w-full bg-juiceGreen hover:bg-emerald-900 text-white font-black py-3 rounded-2xl shadow-lg transition duration-200 text-xs uppercase tracking-wider">
-                        Add To Cart
-                    </button>
+                    <div class="flex justify-between items-center bg-emerald-50/80 p-3 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-600">Standard Size</span>
+                        <button onclick="alert('ABC added!')" class="bg-juiceGreen hover:bg-emerald-900 text-white font-black px-4 py-2 rounded-xl text-xs uppercase tracking-wider">Add</button>
+                    </div>
+                </div>
+                <!-- Red Detox -->
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-emerald-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-black text-gray-900">Red Detox</h4>
+                            <span class="bg-juiceRed text-white text-xs font-bold px-2.5 py-1 rounded-full">Popular</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4">Beetroot Apple Lemon Ginger Carrot[cite: 1]</p>
+                    </div>
+                    <div class="flex justify-between items-center bg-emerald-50/80 p-3 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-600">Standard Size</span>
+                        <button onclick="alert('Red Detox added!')" class="bg-juiceGreen hover:bg-emerald-900 text-white font-black px-4 py-2 rounded-xl text-xs uppercase tracking-wider">Add</button>
+                    </div>
+                </div>
+                <!-- Green Clean -->
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-emerald-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-black text-gray-900">Green Clean</h4>
+                            <span class="bg-juiceLime text-gray-900 text-xs font-bold px-2.5 py-1 rounded-full">Healthy</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4">Spinach Cucumber Apple Lemon[cite: 1]</p>
+                    </div>
+                    <div class="flex justify-between items-center bg-emerald-50/80 p-3 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-600">Standard Size</span>
+                        <button onclick="alert('Green Clean added!')" class="bg-juiceGreen hover:bg-emerald-900 text-white font-black px-4 py-2 rounded-xl text-xs uppercase tracking-wider">Add</button>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Item 2 -->
-            <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-emerald-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col group" data-aos="fade-up" data-aos-delay="200">
-                <div class="h-52 overflow-hidden relative bg-gray-900">
-                    <span class="absolute top-4 right-4 bg-juiceRed text-white text-[10px] font-black px-3 py-1 rounded-full z-10 shadow-md uppercase tracking-wider">Special</span>
-                    <img src="berries.jpg" alt="Mix Berries" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-lg font-black text-gray-900 mb-1">Mix Berries</h3>
-                    <p class="text-xs text-gray-500 mb-4">Loaded with antioxidants & fresh berries</p>
-                    <div class="flex justify-between items-center mb-6 mt-auto bg-emerald-50/80 p-3 rounded-2xl border border-emerald-100">
-                        <span class="text-xs font-bold text-gray-600">Standard:</span>
-                        <span class="text-base font-black text-juiceRed">Rs 950</span>
+        <!-- 2. Fruit Cocktails -->
+        <div class="mb-14">
+            <h3 class="text-2xl font-black text-juiceGreen mb-6 border-b-2 border-emerald-200 pb-2 flex items-center gap-2">
+                <i class="fa-solid fa-lemon text-juiceRed"></i> Fruit Cocktail Juices
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Mint With Cane -->
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-emerald-100 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-black text-gray-900 mb-1">Mint With Cane</h4>
+                        <p class="text-xs text-gray-500 mb-4">Sugarcane Mint Lemon[cite: 1]</p>
                     </div>
-                    <button onclick="alert('Mix Berries added!')" class="w-full bg-juiceGreen hover:bg-emerald-900 text-white font-black py-3 rounded-2xl shadow-lg transition duration-200 text-xs uppercase tracking-wider">
-                        Add To Cart
-                    </button>
+                    <div class="flex justify-between items-center bg-emerald-50/80 p-3 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-600">Standard Size</span>
+                        <button onclick="alert('Mint With Cane added!')" class="bg-juiceGreen hover:bg-emerald-900 text-white font-black px-4 py-2 rounded-xl text-xs uppercase tracking-wider">Add</button>
+                    </div>
+                </div>
+                <!-- Detox Mind -->
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-emerald-100 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-black text-gray-900 mb-1">Detox Mind</h4>
+                        <p class="text-xs text-gray-500 mb-4">Apple Orange Ginger Lemon[cite: 1]</p>
+                    </div>
+                    <div class="flex justify-between items-center bg-emerald-50/80 p-3 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-600">Standard Size</span>
+                        <button onclick="alert('Detox Mind added!')" class="bg-juiceGreen hover:bg-emerald-900 text-white font-black px-4 py-2 rounded-xl text-xs uppercase tracking-wider">Add</button>
+                    </div>
+                </div>
+                <!-- Berry Bliss -->
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-emerald-100 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-black text-gray-900 mb-1">Berry Bliss</h4>
+                        <p class="text-xs text-gray-500 mb-4">Strawberry Guava Apple[cite: 1]</p>
+                    </div>
+                    <div class="flex justify-between items-center bg-emerald-50/80 p-3 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-600">Standard Size</span>
+                        <button onclick="alert('Berry Bliss added!')" class="bg-juiceGreen hover:bg-emerald-900 text-white font-black px-4 py-2 rounded-xl text-xs uppercase tracking-wider">Add</button>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Item 3 -->
-            <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-emerald-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col group" data-aos="fade-up" data-aos-delay="300">
-                <div class="h-52 overflow-hidden relative bg-gray-900">
-                    <span class="absolute top-4 right-4 bg-juiceRed text-white text-[10px] font-black px-3 py-1 rounded-full z-10 shadow-md uppercase tracking-wider">Fitness</span>
-                    <img src="protein.jpg" alt="Protein Scoop" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-lg font-black text-gray-900 mb-1">Protein Scoop</h3>
-                    <p class="text-xs text-gray-500 mb-4">Power packed energy booster shake</p>
-                    <div class="flex justify-between items-center mb-6 mt-auto bg-emerald-50/80 p-3 rounded-2xl border border-emerald-100">
-                        <span class="text-xs font-bold text-gray-600">S: <span class="text-juiceRed font-black">Rs 400</span></span>
-                        <span class="text-xs font-bold text-gray-600">L: <span class="text-juiceRed font-black">Rs 400</span></span>
+        <!-- 3. Smoothies & Shakes -->
+        <div class="mb-14">
+            <h3 class="text-2xl font-black text-juiceGreen mb-6 border-b-2 border-emerald-200 pb-2 flex items-center gap-2">
+                <i class="fa-solid fa-blender text-juiceRed"></i> Smoothies & Shakes
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Power Berry -->
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-emerald-100 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-black text-gray-900 mb-1">Power Berry</h4>
+                        <p class="text-xs text-gray-500 mb-4">Strawberry Banana Milk[cite: 1]</p>
                     </div>
-                    <button onclick="alert('Protein Scoop added!')" class="w-full bg-juiceGreen hover:bg-emerald-900 text-white font-black py-3 rounded-2xl shadow-lg transition duration-200 text-xs uppercase tracking-wider">
-                        Add To Cart
-                    </button>
+                    <div class="flex justify-between items-center bg-emerald-50/80 p-3 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-600">Standard Size</span>
+                        <button onclick="alert('Power Berry added!')" class="bg-juiceGreen hover:bg-emerald-900 text-white font-black px-4 py-2 rounded-xl text-xs uppercase tracking-wider">Add</button>
+                    </div>
+                </div>
+                <!-- Choco Nut -->
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-emerald-100 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-black text-gray-900 mb-1">Choco Nut</h4>
+                        <p class="text-xs text-gray-500 mb-4">Chocolate Milk Peanut Butter Banana Almonds Milk[cite: 1]</p>
+                    </div>
+                    <div class="flex justify-between items-center bg-emerald-50/80 p-3 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-600">Standard Size</span>
+                        <button onclick="alert('Choco Nut added!')" class="bg-juiceGreen hover:bg-emerald-900 text-white font-black px-4 py-2 rounded-xl text-xs uppercase tracking-wider">Add</button>
+                    </div>
+                </div>
+                <!-- Oats Shake -->
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-emerald-100 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-black text-gray-900 mb-1">Oats Shake</h4>
+                        <p class="text-xs text-gray-500 mb-4">Blueberry Banana Oats Peanut Butter Cocopowder Milk[cite: 1]</p>
+                    </div>
+                    <div class="flex justify-between items-center bg-emerald-50/80 p-3 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-600">Standard Size</span>
+                        <button onclick="alert('Oats Shake added!')" class="bg-juiceGreen hover:bg-emerald-900 text-white font-black px-4 py-2 rounded-xl text-xs uppercase tracking-wider">Add</button>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Item 4 -->
-            <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-emerald-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col group" data-aos="fade-up" data-aos-delay="400">
-                <div class="h-52 overflow-hidden relative bg-gray-900">
-                    <span class="absolute top-4 right-4 bg-juiceRed text-white text-[10px] font-black px-3 py-1 rounded-full z-10 shadow-md uppercase tracking-wider">Classic</span>
-                    <img src="banana.jpg" alt="Banana Juice" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-lg font-black text-gray-900 mb-1">Banana Juice</h3>
-                    <p class="text-xs text-gray-500 mb-4">Smooth, creamy & nourishing flavor</p>
-                    <div class="flex justify-between items-center mb-6 mt-auto bg-emerald-50/80 p-3 rounded-2xl border border-emerald-100">
-                        <span class="text-xs font-bold text-gray-600">S: <span class="text-juiceRed font-black">Rs 500</span></span>
-                        <span class="text-xs font-bold text-gray-600">L: <span class="text-juiceRed font-black">Rs 550</span></span>
+        <!-- 4. Signature Drinks -->
+        <div class="mb-10">
+            <h3 class="text-2xl font-black text-juiceGreen mb-6 border-b-2 border-emerald-200 pb-2 flex items-center gap-2">
+                <i class="fa-solid fa-star text-juiceRed"></i> Signature Drinks & Add-ons
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Avocado -->
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-emerald-100 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-black text-gray-900 mb-1">Avocado</h4>
+                        <p class="text-xs text-gray-500 mb-4">Strawberry Avocado Chia Seeds Honey Milk[cite: 1]</p>
                     </div>
-                    <button onclick="alert('Banana Juice added!')" class="w-full bg-juiceGreen hover:bg-emerald-900 text-white font-black py-3 rounded-2xl shadow-lg transition duration-200 text-xs uppercase tracking-wider">
-                        Add To Cart
-                    </button>
+                    <div class="flex justify-between items-center bg-emerald-50/80 p-3 rounded-2xl">
+                        <span class="text-xs font-bold text-gray-600">Signature</span>
+                        <button onclick="alert('Avocado added!')" class="bg-juiceGreen hover:bg-emerald-900 text-white font-black px-4 py-2 rounded-xl text-xs uppercase tracking-wider">Add</button>
+                    </div>
+                </div>
+                <!-- Protein Scoop -->
+                <div class="bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-emerald-100 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-black text-gray-900 mb-1">Protein Scoop Add-on</h4>
+                        <p class="text-xs text-gray-500 mb-4">Boost any beverage with a power protein scoop</p>
+                    </div>
+                    <div class="flex justify-between items-center bg-emerald-50/80 p-3 rounded-2xl">
+                        <span class="text-xs font-bold text-juiceRed">Rs 400 Extra[cite: 1]</span>
+                        <button onclick="alert('Protein Scoop added!')" class="bg-juiceGreen hover:bg-emerald-900 text-white font-black px-4 py-2 rounded-xl text-xs uppercase tracking-wider">Add</button>
+                    </div>
                 </div>
             </div>
-
-            <!-- Item 5 -->
-            <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-emerald-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col group" data-aos="fade-up" data-aos-delay="100">
-                <div class="h-52 overflow-hidden relative bg-gray-900">
-                    <span class="absolute top-4 right-4 bg-juiceRed text-white text-[10px] font-black px-3 py-1 rounded-full z-10 shadow-md uppercase tracking-wider">Healthy</span>
-                    <img src="oats.jpg" alt="Oats with Chia" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-lg font-black text-gray-900 mb-1">Oats with Chia</h3>
-                    <p class="text-xs text-gray-500 mb-4">Fiber rich healthy diet beverage</p>
-                    <div class="flex justify-between items-center mb-6 mt-auto bg-emerald-50/80 p-3 rounded-2xl border border-emerald-100">
-                        <span class="text-xs font-bold text-gray-600">S: <span class="text-juiceRed font-black">Rs 500</span></span>
-                        <span class="text-xs font-bold text-gray-600">L: <span class="text-juiceRed font-black">Rs 550</span></span>
-                    </div>
-                    <button onclick="alert('Oats with Chia added!')" class="w-full bg-juiceGreen hover:bg-emerald-900 text-white font-black py-3 rounded-2xl shadow-lg transition duration-200 text-xs uppercase tracking-wider">
-                        Add To Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Item 6 -->
-            <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-emerald-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col group" data-aos="fade-up" data-aos-delay="200">
-                <div class="h-52 overflow-hidden relative bg-gray-900">
-                    <span class="absolute top-4 right-4 bg-juiceRed text-white text-[10px] font-black px-3 py-1 rounded-full z-10 shadow-md uppercase tracking-wider">Refreshing</span>
-                    <img src="grapefruits.jpg" alt="Grapefruits" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-lg font-black text-gray-900 mb-1">Grapefruits</h3>
-                    <p class="text-xs text-gray-500 mb-4">Tangy and refreshing citrus burst</p>
-                    <div class="flex justify-between items-center mb-6 mt-auto bg-emerald-50/80 p-3 rounded-2xl border border-emerald-100">
-                        <span class="text-xs font-bold text-gray-600">S: <span class="text-juiceRed font-black">Rs 500</span></span>
-                        <span class="text-xs font-bold text-gray-600">L: <span class="text-juiceRed font-black">Rs 550</span></span>
-                    </div>
-                    <button onclick="alert('Grapefruits added!')" class="w-full bg-juiceGreen hover:bg-emerald-900 text-white font-black py-3 rounded-2xl shadow-lg transition duration-200 text-xs uppercase tracking-wider">
-                        Add To Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Item 7 -->
-            <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-emerald-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col group" data-aos="fade-up" data-aos-delay="300">
-                <div class="h-52 overflow-hidden relative bg-gray-900">
-                    <span class="absolute top-4 right-4 bg-juiceRed text-white text-[10px] font-black px-3 py-1 rounded-full z-10 shadow-md uppercase tracking-wider">Vitamin C</span>
-                    <img src="orange.jpg" alt="Orange Juice" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-lg font-black text-gray-900 mb-1">Orange Juice</h3>
-                    <p class="text-xs text-gray-500 mb-4">100% pure squeezed fresh oranges</p>
-                    <div class="flex justify-between items-center mb-6 mt-auto bg-emerald-50/80 p-3 rounded-2xl border border-emerald-100">
-                        <span class="text-xs font-bold text-gray-600">S: <span class="text-juiceRed font-black">Rs 650</span></span>
-                        <span class="text-xs font-bold text-gray-600">L: <span class="text-juiceRed font-black">Rs 680</span></span>
-                    </div>
-                    <button onclick="alert('Orange Juice added!')" class="w-full bg-juiceGreen hover:bg-emerald-900 text-white font-black py-3 rounded-2xl shadow-lg transition duration-200 text-xs uppercase tracking-wider">
-                        Add To Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- Item 8 -->
-            <div class="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden border border-emerald-100 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col group" data-aos="fade-up" data-aos-delay="400">
-                <div class="h-52 overflow-hidden relative bg-gray-900">
-                    <span class="absolute top-4 right-4 bg-juiceRed text-white text-[10px] font-black px-3 py-1 rounded-full z-10 shadow-md uppercase tracking-wider">Sweet</span>
-                    <img src="grapes.jpg" alt="Sweet Grapes" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-lg font-black text-gray-900 mb-1">Sweet Grapes</h3>
-                    <p class="text-xs text-gray-500 mb-4">Naturally sweet premium grape extract</p>
-                    <div class="flex justify-between items-center mb-6 mt-auto bg-emerald-50/80 p-3 rounded-2xl border border-emerald-100">
-                        <span class="text-xs font-bold text-gray-600">S: <span class="text-juiceRed font-black">Rs 480</span></span>
-                        <span class="text-xs font-bold text-gray-600">L: <span class="text-juiceRed font-black">Rs 530</span></span>
-                    </div>
-                    <button onclick="alert('Sweet Grapes added!')" class="w-full bg-juiceGreen hover:bg-emerald-900 text-white font-black py-3 rounded-2xl shadow-lg transition duration-200 text-xs uppercase tracking-wider">
-                        Add To Cart
-                    </button>
-                </div>
-            </div>
+        </div>
+        <div class="bg-emerald-100/60 p-4 rounded-2xl text-center text-xs font-bold text-gray-700">
+            <i class="fa-solid fa-circle-info text-juiceRed mr-1"></i> Sweetness options available: White Sugar, Brown Sugar, or Pure Honey[cite: 1].
         </div>
     </section>
 
-    <!-- About Section & Store Showcases -->
+    <!-- About & Philosophy Section -->
     <section id="about" class="bg-white py-24 px-4 border-t border-emerald-100 shadow-2xl relative overflow-hidden">
         <div class="max-w-7xl mx-auto space-y-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6" data-aos="fade-right" data-aos-duration="1000">
-                    <span class="bg-juiceGreen/10 text-juiceGreen font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full border border-juiceGreen/20">Our Philosophy</span>
+                    <span class="bg-juiceGreen/10 text-juiceGreen font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full border border-juiceGreen/20">Our Story & Vision</span>
                     <h2 class="text-3xl md:text-5xl font-black text-gray-900 leading-tight">Why Choose <span class="text-juiceRed">Juice 4 Fun?</span></h2>
                     <p class="text-gray-600 leading-relaxed text-base">
-                        Healthy living should be thrilling and full of delicious flavor! Operating right here in Karachi, every bottle and glass we serve is packed with live enzymes, vitamins, and zero artificial preservatives.
+                        Founded by 4 dedicated individuals boasting **10-12 years of core experience** in the food and beverage industry, Juice 4 Fun brings pure nutrition to Karachi[cite: 1]. Operating right here locally, every bottle and glass we serve is packed with live enzymes, vitamins, and zero artificial preservatives[cite: 1].
                     </p>
                     <ul class="space-y-4 font-bold text-gray-700">
                         <li class="flex items-center"><i class="fa-solid fa-circle-check text-juiceRed mr-3 text-xl"></i> 100% Fresh Organic Ingredients</li>
                         <li class="flex items-center"><i class="fa-solid fa-circle-check text-juiceRed mr-3 text-xl"></i> Zero Added Sugar or Preservatives</li>
-                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-juiceRed mr-3 text-xl"></i> Cold-pressed to lock in nutrients</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-juiceRed mr-3 text-xl"></i> Operational excellence, hygiene, and premium quality focus[cite: 1]</li>
                     </ul>
                 </div>
 
@@ -265,8 +283,96 @@
                 </div>
             </div>
 
+            <!-- Management Team Section -->
+            <div id="team" class="pt-8">
+                <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <span class="bg-juiceGreen/10 text-juiceGreen font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full border border-juiceGreen/20">Leadership</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-4">Our Management <span class="text-juiceRed">Team</span></h2>
+                    <p class="text-gray-600 mt-2 text-sm">Experienced professionals dedicated to quality and customer health[cite: 1].</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- CEO -->
+                    <div class="bg-emerald-50/60 p-6 rounded-3xl border border-emerald-100 shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-20 h-20 bg-juiceGreen text-white font-black text-2xl rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">AK</div>
+                        <h3 class="text-lg font-black text-gray-900">Afzal Khan</h3>
+                        <p class="text-xs font-bold text-juiceRed mb-2 uppercase tracking-wide">CEO[cite: 1]</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Leads the organization with clear vision, policy making, and long-term business growth[cite: 1].</p>
+                    </div>
+                    <!-- Ops & Finance -->
+                    <div class="bg-emerald-50/60 p-6 rounded-3xl border border-emerald-100 shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-20 h-20 bg-juiceGreen text-white font-black text-2xl rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">AJ</div>
+                        <h3 class="text-lg font-black text-gray-900">Ahsan Jamal</h3>
+                        <p class="text-xs font-bold text-juiceRed mb-2 uppercase tracking-wide">Ops & Finance Manager[cite: 1]</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Oversees daily operations, financial affairs, budgeting, and financial reporting[cite: 1].</p>
+                    </div>
+                    <!-- Marketing & HR -->
+                    <div class="bg-emerald-50/60 p-6 rounded-3xl border border-emerald-100 shadow-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-20 h-20 bg-juiceGreen text-white font-black text-2xl rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">MF</div>
+                        <h3 class="text-lg font-black text-gray-900">Muhammad Farooq</h3>
+                        <p class="text-xs font-bold text-juiceRed mb-2 uppercase tracking-wide">Marketing, Design & HR[cite: 1]</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Handles marketing strategies, brand development, creative design, and HR functions[cite: 1].</p>
+                    </div>
+                    <!-- Procurement & Operation -->
+                    <div class="bg-emerald-50/60 p-6 rounded-3xl border border-emerald-100 shadow-lg text-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-20 h-20 bg-juiceGreen text-white font-black text-2xl rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">MA</div>
+                        <h3 class="text-lg font-black text-gray-900">Muhammad Abdullah</h3>
+                        <p class="text-xs font-bold text-juiceRed mb-2 uppercase tracking-wide">Procurement & Operation[cite: 1]</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Manages procurement, supplier management, raw material purchasing, and quality assurance[cite: 1].</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificates & Legal Compliance Section -->
+            <div id="compliance" class="pt-8 border-t border-emerald-100">
+                <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+                    <span class="bg-juiceGreen/10 text-juiceGreen font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full border border-juiceGreen/20">Trust & Authenticity</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-4">Certificates & <span class="text-juiceRed">Legal Compliance</span></h2>
+                    <p class="text-gray-600 mt-2 text-sm">Fully registered, approved, and compliant with government food standards[cite: 1].</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Sindh Food Authority -->
+                    <div class="bg-gradient-to-br from-gray-900 to-emerald-950 p-6 rounded-3xl text-white shadow-xl border border-emerald-800">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-certificate text-juiceRed text-2xl"></i>
+                            <h3 class="text-base font-black">Sindh Food Authority</h3>
+                        </div>
+                        <p class="text-xs text-gray-300 space-y-1">
+                            <span class="block"><strong>License No:</strong> SEAL-2026-3-8902[cite: 1]</span>
+                            <span class="block"><strong>Location:</strong> Carrefour LuckyOne Mall, Karachi East[cite: 1]</span>
+                            <span class="block"><strong>Validity:</strong> 12-03-2026 To 10-03-2027[cite: 1]</span>
+                        </p>
+                    </div>
+                    <!-- SECP -->
+                    <div class="bg-gradient-to-br from-gray-900 to-emerald-950 p-6 rounded-3xl text-white shadow-xl border border-emerald-800">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-building-shield text-juiceRed text-2xl"></i>
+                            <h3 class="text-base font-black">SECP Incorporation</h3>
+                        </div>
+                        <p class="text-xs text-gray-300 space-y-1">
+                            <span class="block"><strong>Entity:</strong> JUICE4FUN LLP[cite: 1]</span>
+                            <span class="block"><strong>Registration No:</strong> 0329892[cite: 1]</span>
+                            <span class="block"><strong>Status:</strong> Incorporated & Registered[cite: 1]</span>
+                        </p>
+                    </div>
+                    <!-- FBR -->
+                    <div class="bg-gradient-to-br from-gray-900 to-emerald-950 p-6 rounded-3xl text-white shadow-xl border border-emerald-800">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fa-solid fa-file-invoice-dollar text-juiceRed text-2xl"></i>
+                            <h3 class="text-base font-black">FBR Registration</h3>
+                        </div>
+                        <p class="text-xs text-gray-300 space-y-1">
+                            <span class="block"><strong>Taxpayer Status:</strong> Active Taxpayer[cite: 1]</span>
+                            <span class="block"><strong>NTN / Reg No:</strong> 1723726-0[cite: 1]</span>
+                            <span class="block"><strong>Jurisdiction:</strong> RTO-II Karachi[cite: 1]</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <!-- Branches Cards Grid -->
-            <div id="location" class="pt-8">
+            <div id="location" class="pt-8 border-t border-emerald-100">
                 <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
                     <span class="bg-juiceGreen/10 text-juiceGreen font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full border border-juiceGreen/20">Our Network</span>
                     <h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-4">Our Store <span class="text-juiceRed">Branches</span></h2>
@@ -281,10 +387,10 @@
                                 <h3 class="text-xl font-black flex items-center gap-2"><i class="fa-solid fa-store text-juiceRed"></i> LuckyOne Mall</h3>
                                 <span class="bg-white/20 backdrop-blur-sm text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Active</span>
                             </div>
-                            <p class="text-sm opacity-90 leading-relaxed font-light">LG Floor, Carrefour, LuckyOne Mall, Federal B Area Block 21, Gulberg Town, Karachi</p>
+                            <p class="text-sm opacity-90 leading-relaxed font-light">LG Floor, Carrefour, LuckyOne Mall Main Rashid Minhas Rd, Opp UBL Sports Complex, Karachi East[cite: 1]</p>
                         </div>
                         <div class="mt-8 pt-4 border-t border-white/15 flex flex-wrap gap-4 text-xs font-bold opacity-90">
-                            <span><i class="fa-solid fa-phone mr-1.5 text-juiceRed"></i> 0336 2457409</span>
+                            <span><i class="fa-solid fa-phone mr-1.5 text-juiceRed"></i> 0322 9211605 / 0336 2457409[cite: 1]</span>
                             <span><i class="fa-solid fa-clock mr-1.5 text-juiceRed"></i> 11:00 AM Onwards</span>
                         </div>
                     </div>
@@ -299,7 +405,7 @@
                             <p class="text-sm opacity-90 leading-relaxed font-light">Near PSO Pump, Main Shahrah-e-Faisal, Karachi</p>
                         </div>
                         <div class="mt-8 pt-4 border-t border-white/15 flex flex-wrap gap-4 text-xs font-bold opacity-90">
-                            <span><i class="fa-solid fa-phone mr-1.5 text-juiceRed"></i> 0336 2457409</span>
+                            <span><i class="fa-solid fa-phone mr-1.5 text-juiceRed"></i> 0336 2457409[cite: 1]</span>
                             <span><i class="fa-solid fa-clock mr-1.5 text-juiceRed"></i> 11:00 AM Onwards</span>
                         </div>
                     </div>
@@ -313,12 +419,13 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center text-center md:text-left">
             <div class="flex flex-col items-center md:items-start">
                 <img src="logo.png" alt="Juice 4 Fun Logo" class="h-12 w-auto object-contain mb-3 brightness-200 drop-shadow">
-                <p class="text-gray-400 text-xs leading-relaxed">Fresh Looks. Fun Tastes. Refreshing your mind and body every single day.</p>
+                <p class="text-gray-400 text-xs leading-relaxed">Fresh Looks. Fun Tastes. Refreshing your mind and body every single day[cite: 1].</p>
             </div>
             <div class="space-y-2 text-sm text-gray-300">
                 <p class="font-bold text-white text-base mb-2">Contact Info</p>
-                <p><i class="fa-solid fa-phone text-juiceRed mr-2"></i> 0336 2457409</p>
-                <p><i class="fa-solid fa-location-dot text-juiceRed mr-2"></i> LuckyOne Mall & Shahrah-e-Faisal, Karachi</p>
+                <p><i class="fa-solid fa-phone text-juiceRed mr-2"></i> 0322 9211605, 0336 2457409[cite: 1]</p>
+                <p><i class="fa-solid fa-envelope text-juiceRed mr-2"></i> info@juice4fun.com.pk[cite: 1]</p>
+                <p><i class="fa-solid fa-location-dot text-juiceRed mr-2"></i> LuckyOne Mall & Shahrah-e-Faisal, Karachi[cite: 1]</p>
             </div>
             <div class="flex flex-col items-center md:items-end space-y-3">
                 <p class="font-bold text-white text-sm">Connect With Us</p>
@@ -330,7 +437,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-zinc-800 text-center text-gray-500 text-xs">
-            © 2026 Juice 4 Fun. All rights reserved. Built with supreme taste.
+            © 2026 Juice 4 Fun (JUICE4FUN LLP). All rights reserved. Built with supreme taste[cite: 1].
         </div>
     </footer>
 
@@ -338,8 +445,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            once: true, // Animation ek hi baar chale gi scroll karne par
-            offset: 50, // Thoda scroll hone par trigger ho jaye gi
+            once: true,
+            offset: 50,
         });
     </script>
 </body>
