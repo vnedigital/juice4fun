@@ -17,7 +17,7 @@
                         juiceGreen: '#198754',
                         juiceDarkGreen: '#0f5132',
                         juiceLime: '#20c997',
-                        juiceRed: '#ff4d4d',
+                        juiceRed: '#dc2626',
                         juiceLight: '#f4fbf7'
                     }
                 }
@@ -53,6 +53,7 @@
             <!-- Nav Links -->
             <nav class="hidden lg:flex space-x-8 font-bold text-xs uppercase tracking-wider text-gray-700">
                 <a href="#home" class="hover:text-juiceGreen transition">Home</a>
+                <a href="#intro-banner" class="hover:text-juiceGreen transition">Introduction</a>
                 <a href="#branches" class="hover:text-juiceGreen transition">Branches</a>
                 <a href="#menu" class="hover:text-juiceGreen transition">Our Menu</a>
                 <a href="#contact" class="hover:text-juiceGreen transition">Contact</a>
@@ -68,7 +69,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative bg-gradient-to-b from-emerald-100/50 to-juiceLight py-20 lg:py-32 px-4 overflow-hidden">
+    <section id="home" class="relative bg-gradient-to-b from-emerald-100/50 to-juiceLight py-16 lg:py-24 px-4 overflow-hidden">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="text-center lg:text-left z-10" data-aos="fade-right" data-aos-duration="1000">
                 <span class="bg-juiceGreen/10 text-juiceGreen font-extrabold text-xs uppercase tracking-widest px-4 py-2 rounded-full border border-juiceGreen/20 inline-block mb-4 shadow-sm">100% Organic & Natural</span>
@@ -79,7 +80,7 @@
                     Discover the ultimate refreshment with our freshly blended fruit juices, immunity-boosting detox drinks, and creamy shakes made live for you in Karachi.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                    <a href="#menu" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white font-bold px-8 py-4 rounded-full shadow-lg transition uppercase tracking-wider text-sm text-center transform hover:-translate-y-0.5">
+                    <a href="#menu" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white font-bold px-8 py-4 rounded-full shadow-lg transition uppercase tracking-wider text-sm text-center">
                         Explore Menu
                     </a>
                     <a href="#branches" class="bg-white hover:bg-gray-50 text-juiceGreen border border-juiceGreen/30 font-bold px-8 py-4 rounded-full shadow-sm transition uppercase tracking-wider text-sm text-center">
@@ -89,12 +90,80 @@
             </div>
             <div class="relative flex justify-center" data-aos="fade-left" data-aos-duration="1000">
                 <div class="w-72 h-72 sm:w-96 sm:h-96 bg-juiceGreen/20 rounded-full absolute filter blur-2xl -z-10 animate-pulse"></div>
-                <img src="juice-cup.png" alt="Juice Cup" class="max-h-[450px] w-auto object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105">
+                <img src="juice-cup.png" alt="Juice Cup" class="max-h-[420px] w-auto object-contain drop-shadow-2xl">
             </div>
         </div>
     </section>
 
-    <!-- Branches Section with Counter Pictures -->
+    <!-- HD INTRODUCTION BANNER SECTION -->
+    <section id="intro-banner" class="py-12 px-4 max-w-7xl mx-auto">
+        <div class="relative bg-gradient-to-br from-gray-900 via-rose-950 to-black rounded-3xl overflow-hidden shadow-2xl border border-red-900/30 py-16 px-6 sm:px-12 text-white" data-aos="zoom-in" data-aos-duration="800">
+            
+            <!-- Background Glow Effects -->
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-juiceGreen/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-red-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 text-center mb-10">
+                <h2 class="text-4xl sm:text-7xl font-black uppercase tracking-wider text-white/90 drop-shadow-lg">
+                    INTRO<span class="text-red-500">DUC</span>TION
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Left Brand Info Box -->
+                <div class="lg:col-span-3 bg-red-700/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-red-500/40 text-center lg:text-left flex flex-col justify-center">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-white/80 mb-2">Our Brand Logo:</span>
+                    <div class="bg-white/90 p-3 rounded-xl shadow-inner inline-block mx-auto lg:mx-0 mb-4">
+                        <img src="logo.png" alt="Juice 4 Fun Logo" class="h-12 w-auto object-contain">
+                    </div>
+                </div>
+
+                <!-- Center: HD Cups Display -->
+                <div class="lg:col-span-6 flex justify-center items-center py-4 relative">
+                    <div class="flex justify-center items-center -space-x-6 sm:-space-x-8">
+                        <!-- Green Juice Cup -->
+                        <div class="relative z-10 transform -rotate-6 hover:rotate-0 transition-transform duration-300">
+                            <div class="w-28 sm:w-40 h-44 sm:h-64 bg-emerald-600/80 rounded-t-full rounded-b-2xl shadow-2xl border-2 border-emerald-400/50 flex flex-col items-center justify-end p-3 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-t from-emerald-900 to-transparent opacity-60"></div>
+                                <div class="absolute top-2 w-8 h-24 bg-black rounded-full rotate-12"></div>
+                                <span class="relative z-10 bg-white/90 text-emerald-800 text-[10px] font-black px-2 py-1 rounded shadow">GREEN DETOX</span>
+                            </div>
+                        </div>
+
+                        <!-- Red Juice Cup (Center & Prominent) -->
+                        <div class="relative z-20 transform scale-110 hover:scale-115 transition-transform duration-300">
+                            <div class="w-32 sm:w-48 h-48 sm:h-72 bg-red-600/90 rounded-t-full rounded-b-2xl shadow-2xl border-2 border-red-400/60 flex flex-col items-center justify-end p-3 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-t from-red-950 to-transparent opacity-60"></div>
+                                <div class="absolute top-2 w-8 h-28 bg-black rounded-full -rotate-6"></div>
+                                <div class="absolute bottom-4 bg-white px-3 py-1 rounded-full shadow-md">
+                                    <img src="logo.png" alt="Logo" class="h-6 w-auto object-contain">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blue Juice Cup -->
+                        <div class="relative z-10 transform rotate-6 hover:rotate-0 transition-transform duration-300">
+                            <div class="w-28 sm:w-40 h-44 sm:h-64 bg-blue-600/80 rounded-t-full rounded-b-2xl shadow-2xl border-2 border-blue-400/50 flex flex-col items-center justify-end p-3 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-t from-blue-950 to-transparent opacity-60"></div>
+                                <div class="absolute top-2 w-8 h-24 bg-black rounded-full rotate-6"></div>
+                                <span class="relative z-10 bg-white/90 text-blue-800 text-[10px] font-black px-2 py-1 rounded shadow">BLUE LAGOON</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Tagline Box -->
+                <div class="lg:col-span-3 bg-red-700/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-red-500/40 text-center lg:text-left flex flex-col justify-center">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-white/80 mb-2">Our Tag Line:</span>
+                    <p class="text-sm sm:text-base font-bold text-white leading-relaxed italic">
+                        "Let have fun by grabing some Juice"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
     <section id="branches" class="py-20 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-12" data-aos="fade-down">
             <span class="bg-juiceGreen/10 text-juiceGreen font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full border border-juiceGreen/20">Visit Us</span>
@@ -103,10 +172,9 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Branch 1: Lucky One Mall -->
+            <!-- Branch 1 -->
             <div class="bg-white rounded-3xl p-6 shadow-xl border border-emerald-100 flex flex-col justify-between transition-transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
                 <div>
-                    <!-- Branch Counter Image -->
                     <div class="h-56 bg-juiceLight rounded-2xl mb-5 overflow-hidden relative shadow-inner">
                         <img src="lucky-one-counter.jpg" alt="Lucky One Mall Counter" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='juice-cup.png'; this.classList.add('object-contain', 'p-4');">
                     </div>
@@ -120,10 +188,9 @@
                 </div>
             </div>
 
-            <!-- Branch 2: Shahrah-e-Faisal -->
+            <!-- Branch 2 -->
             <div class="bg-white rounded-3xl p-6 shadow-xl border border-emerald-100 flex flex-col justify-between transition-transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
                 <div>
-                    <!-- Branch Counter Image -->
                     <div class="h-56 bg-juiceLight rounded-2xl mb-5 overflow-hidden relative shadow-inner">
                         <img src="shahrah-e-faisal-counter.jpg" alt="Shahrah-e-Faisal Counter" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='juice-cup.png'; this.classList.add('object-contain', 'p-4');">
                     </div>
@@ -215,6 +282,7 @@
                 <h4 class="font-bold text-sm uppercase tracking-wider text-juiceLime mb-4">Quick Links</h4>
                 <ul class="space-y-2 text-xs text-gray-300">
                     <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                    <li><a href="#intro-banner" class="hover:text-white transition">Introduction</a></li>
                     <li><a href="#branches" class="hover:text-white transition">Branches</a></li>
                     <li><a href="#menu" class="hover:text-white transition">Our Menu</a></li>
                 </ul>
