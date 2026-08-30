@@ -25,114 +25,106 @@
         }
     </script>
 </head>
-<body class="bg-gradient-to-br from-emerald-50 via-lime-50 to-amber-50 text-gray-800 font-sans antialiased selection:bg-juiceRed selection:text-white overflow-x-hidden">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-juiceRed selection:text-white overflow-x-hidden">
 
-    <!-- Navbar -->
-    <header class="bg-white/85 backdrop-blur-xl shadow-lg sticky top-0 z-50 border-b border-emerald-100 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+    <!-- Top Utility Bar (Greeno Style) -->
+    <div class="bg-juiceGreen text-white text-xs py-2 px-4 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <span><i class="fa-solid fa-location-dot mr-1 text-juiceLime"></i> North Nazimabad, Karachi</span>
+                <span><i class="fa-solid fa-phone mr-1 text-juiceLime"></i> 021-111-473-366</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#franchise" class="hover:underline">Get A Franchise</a>
+                <a href="#signin" class="hover:underline"><i class="fa-solid fa-user mr-1"></i> Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
             <!-- Logo -->
             <div class="flex items-center">
                 <a href="#home" class="flex items-center">
-                    <img src="logo.png" alt="Juice 4 Fun Logo" class="h-12 md:h-14 w-auto object-contain drop-shadow-md">
+                    <img src="logo.png" alt="Juice 4 Fun Logo" class="h-10 md:h-12 w-auto object-contain">
                 </a>
             </div>
 
             <!-- Nav Links -->
             <nav class="hidden lg:flex space-x-6 font-bold text-gray-700 text-xs tracking-wider">
-                <a href="#home" class="hover:text-juiceRed transition">HOME</a>
-                <a href="#menu" class="hover:text-juiceRed transition">MENU</a>
-                <a href="#about" class="hover:text-juiceRed transition">ABOUT & STORY</a>
-                <a href="#team" class="hover:text-juiceRed transition">MANAGEMENT</a>
-                <a href="#compliance" class="hover:text-juiceRed transition">CERTIFICATES</a>
-                <a href="#location" class="hover:text-juiceRed transition">STORES</a>
-                <a href="#feedback" class="hover:text-juiceRed transition text-juiceRed">FEEDBACK</a>
-                <a href="#contact" class="hover:text-juiceRed transition">CONTACT</a>
+                <a href="#home" class="hover:text-juiceGreen transition">HOME</a>
+                <a href="#menu" class="hover:text-juiceGreen transition">MENU</a>
+                <a href="#about" class="hover:text-juiceGreen transition">ABOUT & STORY</a>
+                <a href="#team" class="hover:text-juiceGreen transition">MANAGEMENT</a>
+                <a href="#location" class="hover:text-juiceGreen transition">STORES</a>
+                <a href="#contact" class="hover:text-juiceGreen transition">CONTACT</a>
             </nav>
 
             <!-- Right Action Icons -->
-            <div class="flex items-center space-x-3">
-                <button onclick="alert('Cart is empty!')" class="bg-gradient-to-r from-juiceRed to-red-600 hover:from-red-600 hover:to-red-700 text-white px-5 py-2.5 rounded-full shadow-lg transition transform hover:scale-105 flex items-center gap-2 font-bold text-xs uppercase tracking-wider">
-                    <i class="fa-solid fa-cart-shopping"></i> Cart <span class="bg-white text-juiceRed px-2 py-0.5 rounded-full text-[10px]">0</span>
+            <div class="flex items-center space-x-4">
+                <button onclick="alert('Cart is empty!')" class="text-gray-700 hover:text-juiceGreen relative text-lg p-2">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="absolute top-0 right-0 bg-juiceRed text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">0</span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden bg-cover bg-center shadow-inner" style="background-image: url('juice-cup.png');">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pointer-events-none"></div>
-        
-        <div class="absolute bottom-12 z-10 text-center px-4 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
-            <span class="bg-juiceRed text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest inline-block mb-3 shadow-lg">100% Pure & Natural</span>
-            <h1 class="text-4xl md:text-6xl font-black text-white drop-shadow-lg mb-4">Fresh Looks. <span class="text-juiceRed">Fun Tastes.</span></h1>
-            <p class="text-white/90 text-sm md:text-base max-w-xl mx-auto mb-6 drop-shadow">Experience the ultimate burst of energy with 100% pure, freshly blended fruit juices, smoothies, and healthy beverages in Karachi.</p>
-            <div class="flex justify-center gap-4">
-                <a href="#menu" class="bg-juiceRed hover:bg-red-700 text-white font-black px-8 py-4 rounded-full shadow-2xl transition transform hover:scale-105 text-sm uppercase tracking-wider">
-                    Explore Menu
-                </a>
-                <a href="#location" class="bg-white/90 backdrop-blur-md hover:bg-white text-juiceGreen font-black px-8 py-4 rounded-full shadow-2xl transition text-sm uppercase tracking-wider">
-                    Our Stores
-                </a>
+    <!-- Hero / Booking Banner Section (Greeno Vibe) -->
+    <section id="home" class="relative w-full max-w-7xl mx-auto px-4 my-6">
+        <div class="bg-gradient-to-r from-amber-50 via-orange-50 to-emerald-50 rounded-3xl p-6 md:p-12 shadow-sm border border-emerald-100 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+            
+            <!-- Left Content -->
+            <div class="z-10 max-w-xl text-center md:text-left mb-8 md:mb-0">
+                <span class="text-juiceGreen font-bold text-xs uppercase tracking-widest bg-emerald-100/80 px-3 py-1 rounded-full inline-block mb-3">Juice 4 Fun brings fresh vibe to your event</span>
+                <h1 class="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-4">
+                    BOOKINGS OPEN <span class="block text-juiceGreen text-xl md:text-2xl font-extrabold mt-1">for Corporate events, festivals, exhibitions & private gatherings.</span>
+                </h1>
+                <div class="bg-juiceGreen text-white font-bold text-xs md:text-sm px-6 py-3 rounded-full inline-flex items-center gap-2 shadow-md">
+                    <i class="fa-solid fa-phone"></i> Call us at 111-473-366 to book a Juice 4 Fun kiosk
+                </div>
+                
+                <div class="flex items-center justify-center md:justify-start gap-4 mt-6 text-gray-600 text-sm">
+                    <div class="flex gap-3 text-juiceGreen text-lg">
+                        <a href="#" class="hover:text-juiceRed"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-juiceRed"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-juiceRed"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <span class="font-bold text-xs text-gray-500">@juice4funjuices</span>
+                </div>
+            </div>
+
+            <!-- Right Image/Illustration Area -->
+            <div class="z-10 max-w-md w-full">
+                <div class="bg-juiceGreen/10 rounded-2xl p-4 border border-emerald-200 text-center">
+                    <img src="shop.jpg" alt="Juice 4 Fun Kiosk" class="rounded-xl shadow-md w-full h-auto object-cover max-h-[250px]">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="py-24 px-4 max-w-7xl mx-auto">
-        <!-- (Menu content wese hi rehne diya hai...) -->
-    </section>
-
-    <!-- Updated Management Team Section -->
-    <section id="team" class="py-24 px-4 max-w-7xl mx-auto">
-        <div class="text-center mb-16" data-aos="fade-down" data-aos-duration="800">
-            <span class="bg-juiceGreen/10 text-juiceGreen font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full border border-juiceGreen/20">Leadership</span>
-            <h2 class="text-3xl md:text-5xl font-black text-gray-900 mt-4">Our Management <span class="text-juiceRed">Team</span></h2>
-            <p class="text-gray-600 mt-3 max-w-lg mx-auto text-sm md:text-base">Experienced professionals dedicated to quality and customer health.</p>
+    <!-- Horizontal Category Scroll Bar -->
+    <div class="bg-juiceGreen text-white py-3 shadow-inner sticky top-[65px] z-40 overflow-x-auto no-scrollbar">
+        <div class="max-w-7xl mx-auto px-4 flex space-x-8 text-xs font-bold uppercase tracking-wider whitespace-nowrap">
+            <a href="#veggie" class="hover:text-juiceLime transition">Veggie Juices</a>
+            <a href="#cocktail" class="hover:text-juiceLime transition">Fruit Cocktail</a>
+            <a href="#smoothies" class="hover:text-juiceLime transition">Smoothies & Shakes</a>
+            <a href="#simple" class="hover:text-juiceLime transition">Simple Juice Selection</a>
+            <a href="#detox" class="hover:text-juiceLime transition">Detox Line</a>
         </div>
+    </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Afzal Khan -->
-            <div class="bg-white/90 backdrop-blur-md p-8 rounded-3xl shadow-lg border border-emerald-100 flex flex-col items-center text-center transform transition hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-20 h-20 rounded-full bg-juiceGreen text-white flex items-center justify-center text-2xl font-black mb-6 shadow-md">
-                    AK
-                </div>
-                <h3 class="text-xl font-black text-gray-900 mb-1">Afzal Khan</h3>
-                <span class="text-juiceRed text-xs font-extrabold uppercase tracking-wider mb-4">CEO</span>
-                <p class="text-gray-600 text-xs leading-relaxed">Leads the organization with clear vision, policy making, and long-term business growth.</p>
-            </div>
-
-            <!-- Ahsan Jamal -->
-            <div class="bg-white/90 backdrop-blur-md p-8 rounded-3xl shadow-lg border border-emerald-100 flex flex-col items-center text-center transform transition hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-20 h-20 rounded-full bg-juiceGreen text-white flex items-center justify-center text-2xl font-black mb-6 shadow-md">
-                    AJ
-                </div>
-                <h3 class="text-xl font-black text-gray-900 mb-1">Ahsan Jamal</h3>
-                <span class="text-juiceRed text-xs font-extrabold uppercase tracking-wider mb-4">Ops & Finance Manager</span>
-                <p class="text-gray-600 text-xs leading-relaxed">Oversees daily operations, financial affairs, budgeting, and financial reporting.</p>
-            </div>
-
-            <!-- Muhammad Farooq -->
-            <div class="bg-white/90 backdrop-blur-md p-8 rounded-3xl shadow-lg border border-emerald-100 flex flex-col items-center text-center transform transition hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-20 h-20 rounded-full bg-juiceGreen text-white flex items-center justify-center text-2xl font-black mb-6 shadow-md">
-                    MF
-                </div>
-                <h3 class="text-xl font-black text-gray-900 mb-1">Muhammad Farooq</h3>
-                <span class="text-juiceRed text-xs font-extrabold uppercase tracking-wider mb-4">Marketing, Design & HR</span>
-                <p class="text-gray-600 text-xs leading-relaxed">Handles marketing strategies, brand development, creative design, and HR functions.</p>
-            </div>
-
-            <!-- Muhammad Abdullah -->
-            <div class="bg-white/90 backdrop-blur-md p-8 rounded-3xl shadow-lg border border-emerald-100 flex flex-col items-center text-center transform transition hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="400">
-                <div class="w-20 h-20 rounded-full bg-juiceGreen text-white flex items-center justify-center text-2xl font-black mb-6 shadow-md">
-                    MA
-                </div>
-                <h3 class="text-xl font-black text-gray-900 mb-1">Muhammad Abdullah</h3>
-                <span class="text-juiceRed text-xs font-extrabold uppercase tracking-wider mb-4">Procurement & Operation</span>
-                <p class="text-gray-600 text-xs leading-relaxed">Manages procurement, supplier management, raw material purchasing, and quality assurance.</p>
-            </div>
+    <!-- Search Bar Section -->
+    <div class="max-w-xl mx-auto px-4 my-8">
+        <div class="relative">
+            <input type="text" placeholder="Search for juices, shakes..." class="w-full bg-white border border-gray-200 rounded-full py-3 pl-12 pr-10 text-sm shadow-sm focus:outline-none focus:border-juiceGreen">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-gray-400"></i>
+            <button class="absolute right-2 top-2 bg-juiceGreen text-white w-8 h-8 rounded-full flex items-center justify-center text-xs">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer and scripts would continue here -->
 </body>
 </html>
