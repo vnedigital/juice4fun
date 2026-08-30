@@ -3,128 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juice 4 Fun - Fresh Looks. Fun Tastes. | Karachi Stores</title>
+    <title>Juice 4 Fun - Premium Fresh & Drinks</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS Animation Library CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts for Elegant Serif & Cursive Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         juiceGreen: '#0f5132',
-                        juiceBrightGreen: '#198754',
-                        juiceLime: '#20c997',
                         juiceRed: '#ff4d4d',
-                        juiceDark: '#121212',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        cursive: ['"Great Vibes"', 'cursive'],
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-juiceRed selection:text-white overflow-x-hidden">
+<body class="bg-zinc-950 text-white font-sans antialiased selection:bg-juiceRed selection:text-white overflow-x-hidden">
 
-    <!-- Top Utility Bar (Greeno Style) -->
-    <div class="bg-juiceGreen text-white text-xs py-2 px-4 hidden md:block">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-6">
-                <span><i class="fa-solid fa-location-dot mr-1 text-juiceLime"></i> North Nazimabad, Karachi</span>
-                <span><i class="fa-solid fa-phone mr-1 text-juiceLime"></i> 021-111-473-366</span>
-            </div>
-            <div class="flex items-center gap-6">
-                <a href="#franchise" class="hover:underline">Get A Franchise</a>
-                <a href="#signin" class="hover:underline"><i class="fa-solid fa-user mr-1"></i> Sign In</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Navbar -->
-    <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <!-- Logo -->
+    <!-- Transparent Floating Header (Jevelin Style) -->
+    <header class="absolute top-0 left-0 right-0 z-50 transition-all bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+            <!-- Logo / Brand Name -->
             <div class="flex items-center">
                 <a href="#home" class="flex items-center">
-                    <img src="logo.png" alt="Juice 4 Fun Logo" class="h-10 md:h-12 w-auto object-contain">
+                    <img src="logo.png" alt="Juice 4 Fun" class="h-10 w-auto object-contain brightness-0 invert">
                 </a>
             </div>
 
             <!-- Nav Links -->
-            <nav class="hidden lg:flex space-x-6 font-bold text-gray-700 text-xs tracking-wider">
-                <a href="#home" class="hover:text-juiceGreen transition">HOME</a>
-                <a href="#menu" class="hover:text-juiceGreen transition">MENU</a>
-                <a href="#about" class="hover:text-juiceGreen transition">ABOUT & STORY</a>
-                <a href="#team" class="hover:text-juiceGreen transition">MANAGEMENT</a>
-                <a href="#location" class="hover:text-juiceGreen transition">STORES</a>
-                <a href="#contact" class="hover:text-juiceGreen transition">CONTACT</a>
+            <nav class="hidden md:flex space-x-8 font-serif text-sm tracking-wide text-zinc-300">
+                <a href="#home" class="hover:text-white transition">Home</a>
+                <a href="#about" class="hover:text-white transition">About us</a>
+                <a href="#menu" class="hover:text-white transition">Menu</a>
+                <a href="#team" class="hover:text-white transition">Management</a>
+                <a href="#contact" class="hover:text-white transition">Contacts</a>
             </nav>
 
-            <!-- Right Action Icons -->
-            <div class="flex items-center space-x-4">
-                <button onclick="alert('Cart is empty!')" class="text-gray-700 hover:text-juiceGreen relative text-lg p-2">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="absolute top-0 right-0 bg-juiceRed text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">0</span>
-                </button>
+            <!-- Right Icons -->
+            <div class="hidden md:flex items-center space-x-5 text-zinc-300 text-sm">
+                <button onclick="alert('Search clicked!')" class="hover:text-white transition"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </header>
 
-    <!-- Hero / Booking Banner Section (Greeno Vibe) -->
-    <section id="home" class="relative w-full max-w-7xl mx-auto px-4 my-6">
-        <div class="bg-gradient-to-r from-amber-50 via-orange-50 to-emerald-50 rounded-3xl p-6 md:p-12 shadow-sm border border-emerald-100 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
-            
-            <!-- Left Content -->
-            <div class="z-10 max-w-xl text-center md:text-left mb-8 md:mb-0">
-                <span class="text-juiceGreen font-bold text-xs uppercase tracking-widest bg-emerald-100/80 px-3 py-1 rounded-full inline-block mb-3">Juice 4 Fun brings fresh vibe to your event</span>
-                <h1 class="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-4">
-                    BOOKINGS OPEN <span class="block text-juiceGreen text-xl md:text-2xl font-extrabold mt-1">for Corporate events, festivals, exhibitions & private gatherings.</span>
-                </h1>
-                <div class="bg-juiceGreen text-white font-bold text-xs md:text-sm px-6 py-3 rounded-full inline-flex items-center gap-2 shadow-md">
-                    <i class="fa-solid fa-phone"></i> Call us at 111-473-366 to book a Juice 4 Fun kiosk
-                </div>
-                
-                <div class="flex items-center justify-center md:justify-start gap-4 mt-6 text-gray-600 text-sm">
-                    <div class="flex gap-3 text-juiceGreen text-lg">
-                        <a href="#" class="hover:text-juiceRed"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="hover:text-juiceRed"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="hover:text-juiceRed"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
-                    <span class="font-bold text-xs text-gray-500">@juice4funjuices</span>
-                </div>
-            </div>
+    <!-- Side Floating Toolbar (Jevelin Style Right Panel) -->
+    <div class="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-3 bg-zinc-900/80 backdrop-blur-md p-2 rounded-xl border border-zinc-800 shadow-2xl">
+        <button class="w-10 h-10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition" title="Layout Options"><i class="fa-solid fa-layer-group"></i></button>
+        <button class="w-10 h-10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition relative" title="Cart"><i class="fa-solid fa-cart-shopping"></i><span class="absolute top-2 right-2 w-2 h-2 bg-juiceRed rounded-full"></span></button>
+        <button class="w-10 h-10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition" title="Settings"><i class="fa-solid fa-sliders"></i></button>
+        <button class="w-10 h-10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition" title="Messages"><i class="fa-regular fa-envelope"></i></button>
+    </div>
 
-            <!-- Right Image/Illustration Area -->
-            <div class="z-10 max-w-md w-full">
-                <div class="bg-juiceGreen/10 rounded-2xl p-4 border border-emerald-200 text-center">
-                    <img src="shop.jpg" alt="Juice 4 Fun Kiosk" class="rounded-xl shadow-md w-full h-auto object-cover max-h-[250px]">
-                </div>
+    <!-- Full Screen Hero Section -->
+    <section id="home" class="relative w-full h-screen flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('juice-cup.png');">
+        
+        <div class="text-center px-4 max-w-4xl mx-auto z-10 mt-12">
+            <!-- Cursive Accent Text -->
+            <span class="font-cursive text-juiceRed text-4xl md:text-5xl block mb-2 drop-shadow-md">Premium</span>
+            
+            <!-- Main Serif Heading -->
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-normal text-white tracking-wide drop-shadow-2xl leading-tight">
+                Fresh Drinks <span class="italic font-light">& Dishes</span>
+            </h1>
+
+            <!-- Scroll Down Indicator Animation -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+                <a href="#menu" class="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center p-1 hover:border-white transition">
+                    <div class="w-1.5 h-3 bg-white rounded-full animate-bounce"></div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Horizontal Category Scroll Bar -->
-    <div class="bg-juiceGreen text-white py-3 shadow-inner sticky top-[65px] z-40 overflow-x-auto no-scrollbar">
-        <div class="max-w-7xl mx-auto px-4 flex space-x-8 text-xs font-bold uppercase tracking-wider whitespace-nowrap">
-            <a href="#veggie" class="hover:text-juiceLime transition">Veggie Juices</a>
-            <a href="#cocktail" class="hover:text-juiceLime transition">Fruit Cocktail</a>
-            <a href="#smoothies" class="hover:text-juiceLime transition">Smoothies & Shakes</a>
-            <a href="#simple" class="hover:text-juiceLime transition">Simple Juice Selection</a>
-            <a href="#detox" class="hover:text-juiceLime transition">Detox Line</a>
+    <!-- Menu Section / Container Placeholder -->
+    <section id="menu" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="font-cursive text-juiceRed text-3xl">Discover Our Taste</span>
+            <h2 class="font-serif text-4xl md:text-5xl mt-2 text-zinc-100">Our Signature <span class="text-juiceRed italic">Menu</span></h2>
         </div>
-    </div>
-
-    <!-- Search Bar Section -->
-    <div class="max-w-xl mx-auto px-4 my-8">
-        <div class="relative">
-            <input type="text" placeholder="Search for juices, shakes..." class="w-full bg-white border border-gray-200 rounded-full py-3 pl-12 pr-10 text-sm shadow-sm focus:outline-none focus:border-juiceGreen">
-            <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-gray-400"></i>
-            <button class="absolute right-2 top-2 bg-juiceGreen text-white w-8 h-8 rounded-full flex items-center justify-center text-xs">
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-        </div>
-    </div>
+    </section>
 
 </body>
 </html>
