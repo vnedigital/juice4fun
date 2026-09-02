@@ -54,8 +54,8 @@
             </nav>
 
             <div class="flex items-center space-x-4">
-                <button onclick="alert('Cart is empty!')" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white px-5 py-2.5 rounded-full shadow-md transition flex items-center gap-2 font-bold text-xs uppercase tracking-wider">
-                    <i class="fa-solid fa-cart-shopping"></i> Cart <span class="bg-white text-juiceGreen px-2 py-0.5 rounded-full text-[10px]">0</span>
+                <button onclick="toggleCartModal()" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white px-5 py-2.5 rounded-full shadow-md transition flex items-center gap-2 font-bold text-xs uppercase tracking-wider cursor-pointer">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart <span class="bg-white text-juiceGreen px-2 py-0.5 rounded-full text-[10px] cart-count">0</span>
                 </button>
             </div>
         </div>
@@ -89,35 +89,16 @@
 
     <section id="intro-banner" class="py-12 px-4 max-w-7xl mx-auto">
         <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-red-900/20 bg-black group" data-aos="zoom-in" data-aos-duration="800">
-            
             <div id="sliderTrack" class="flex transition-transform duration-700 ease-in-out w-full">
-                <div class="min-w-full flex-shrink-0">
-                    <img src="intro-banner.png" alt="Juice 4 Fun Banner 1" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
-                </div>
-                <div class="min-w-full flex-shrink-0">
-                    <img src="intro-banner-2.png" alt="Juice 4 Fun Banner 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
-                </div>
-                <div class="min-w-full flex-shrink-0">
-                    <img src="intro-banner-3.png" alt="Juice 4 Fun Banner 3" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
-                </div>
-                <div class="min-w-full flex-shrink-0">
-                    <img src="intro-banner-4.png" alt="Juice 4 Fun Banner 4" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
-                </div>
-                <div class="min-w-full flex-shrink-0">
-                    <img src="intro-banner-5.png" alt="Juice 4 Fun Banner 5" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
-                </div>
-                <div class="min-w-full flex-shrink-0">
-                    <img src="slide2.jpg" alt="Juice 4 Fun Slide 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
-                </div>
+                <div class="min-w-full flex-shrink-0"><img src="intro-banner.png" alt="Banner 1" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';"></div>
+                <div class="min-w-full flex-shrink-0"><img src="intro-banner-2.png" alt="Banner 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';"></div>
+                <div class="min-w-full flex-shrink-0"><img src="intro-banner-3.png" alt="Banner 3" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';"></div>
+                <div class="min-w-full flex-shrink-0"><img src="intro-banner-4.png" alt="Banner 4" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';"></div>
+                <div class="min-w-full flex-shrink-0"><img src="intro-banner-5.png" alt="Banner 5" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';"></div>
+                <div class="min-w-full flex-shrink-0"><img src="slide2.jpg" alt="Slide 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';"></div>
             </div>
-
-            <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10 cursor-pointer">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10 cursor-pointer">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-
+            <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10 cursor-pointer"><i class="fa-solid fa-chevron-left"></i></button>
+            <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10 cursor-pointer"><i class="fa-solid fa-chevron-right"></i></button>
             <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
                 <button onclick="currentSlide(0)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="0"></button>
                 <button onclick="currentSlide(1)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="1"></button>
@@ -135,12 +116,11 @@
             <h2 class="text-3xl md:text-5xl font-black text-gray-900 mt-4">Our Karachi <span class="text-juiceGreen">Branches</span></h2>
             <p class="text-gray-600 mt-3 max-w-lg mx-auto text-sm">Drop by our live counters for a fresh and energizing experience.</p>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-3xl p-6 shadow-xl border border-emerald-100 flex flex-col justify-between transition-transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white rounded-3xl p-6 shadow-xl border border-emerald-100 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                 <div>
                     <div class="h-72 sm:h-80 bg-juiceLight rounded-2xl mb-5 overflow-hidden relative shadow-inner">
-                        <img src="lucky-one-counter.jpg" alt="Lucky One Mall Counter" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='juice-cup.png'; this.classList.add('object-contain', 'p-4');">
+                        <img src="lucky-one-counter.jpg" alt="Lucky One" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='juice-cup.png'; this.classList.add('object-contain', 'p-4');">
                     </div>
                     <span class="text-xs font-extrabold text-juiceGreen uppercase tracking-wider">Outlet 01</span>
                     <h3 class="text-xl font-black text-gray-900 mt-1 mb-2">Lucky One Mall</h3>
@@ -151,11 +131,10 @@
                     <span class="bg-juiceGreen/10 text-juiceGreen text-[10px] font-extrabold px-3 py-1 rounded-full uppercase">Open Now</span>
                 </div>
             </div>
-
-            <div class="bg-white rounded-3xl p-6 shadow-xl border border-emerald-100 flex flex-col justify-between transition-transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white rounded-3xl p-6 shadow-xl border border-emerald-100 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                 <div>
                     <div class="h-72 sm:h-80 bg-juiceLight rounded-2xl mb-5 overflow-hidden relative shadow-inner">
-                        <img src="shahrah-e-faisal-counter.jpg" alt="Shahrah-e-Faisal Counter" class="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105" onerror="this.src='juice-cup.png'; this.classList.add('object-contain', 'p-4');">
+                        <img src="shahrah-e-faisal-counter.jpg" alt="Shahrah-e-Faisal" class="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105" onerror="this.src='juice-cup.png'; this.classList.add('object-contain', 'p-4');">
                     </div>
                     <span class="text-xs font-extrabold text-juiceGreen uppercase tracking-wider">Outlet 02</span>
                     <h3 class="text-xl font-black text-gray-900 mt-1 mb-2">Shahrah-e-Faisal</h3>
@@ -169,6 +148,7 @@
         </div>
     </section>
 
+    <!-- MENU SECTION WITH WORKING ADD TO CART BUTTONS -->
     <section id="menu" class="py-24 px-4 max-w-7xl mx-auto bg-white rounded-3xl shadow-sm my-8 border border-emerald-100">
         <div class="text-center mb-12" data-aos="fade-down">
             <span class="bg-juiceGreen/10 text-juiceGreen font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full border border-juiceGreen/20">Our Offerings</span>
@@ -177,10 +157,11 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+            <!-- Item 1 -->
             <div class="bg-juiceLight rounded-3xl p-6 shadow-md border border-emerald-100 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
                 <div>
                     <div class="h-52 bg-white rounded-2xl mb-5 flex items-center justify-center overflow-hidden relative group shadow-sm">
-                        <img src="juice-cup.png" alt="Special Cocktail" class="h-40 object-contain transition-transform duration-500 group-hover:scale-110">
+                        <img src="juice-cup.png" alt="Tropical Paradise Mix" class="h-40 object-contain transition-transform duration-500 group-hover:scale-110">
                     </div>
                     <span class="text-xs font-extrabold text-juiceGreen uppercase tracking-wider">Fruit Cocktail</span>
                     <h3 class="text-xl font-black text-gray-900 mt-1 mb-2">Tropical Paradise Mix</h3>
@@ -188,16 +169,17 @@
                 </div>
                 <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                     <span class="text-xl font-black text-juiceGreen">Rs. 450</span>
-                    <button onclick="alert('Added to cart!')" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md flex items-center gap-2 cursor-pointer">
+                    <button onclick="addToCart('Tropical Paradise Mix', 450)" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md flex items-center gap-2 cursor-pointer">
                         <i class="fa-solid fa-plus"></i> Add to Cart
                     </button>
                 </div>
             </div>
 
+            <!-- Item 2 -->
             <div class="bg-juiceLight rounded-3xl p-6 shadow-md border border-emerald-100 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
                 <div>
                     <div class="h-52 bg-white rounded-2xl mb-5 flex items-center justify-center overflow-hidden relative group shadow-sm">
-                        <img src="juice-cup.png" alt="Detox Green" class="h-40 object-contain transition-transform duration-500 group-hover:scale-110">
+                        <img src="juice-cup.png" alt="Green Cleanse Detox" class="h-40 object-contain transition-transform duration-500 group-hover:scale-110">
                     </div>
                     <span class="text-xs font-extrabold text-juiceGreen uppercase tracking-wider">Detox Line</span>
                     <h3 class="text-xl font-black text-gray-900 mt-1 mb-2">Green Cleanse Detox</h3>
@@ -205,16 +187,17 @@
                 </div>
                 <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                     <span class="text-xl font-black text-juiceGreen">Rs. 500</span>
-                    <button onclick="alert('Added to cart!')" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md flex items-center gap-2 cursor-pointer">
+                    <button onclick="addToCart('Green Cleanse Detox', 500)" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md flex items-center gap-2 cursor-pointer">
                         <i class="fa-solid fa-plus"></i> Add to Cart
                     </button>
                 </div>
             </div>
 
+            <!-- Item 3 -->
             <div class="bg-juiceLight rounded-3xl p-6 shadow-md border border-emerald-100 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
                 <div>
                     <div class="h-52 bg-white rounded-2xl mb-5 flex items-center justify-center overflow-hidden relative group shadow-sm">
-                        <img src="juice-cup.png" alt="Smoothie" class="h-40 object-contain transition-transform duration-500 group-hover:scale-110">
+                        <img src="juice-cup.png" alt="Creamy Banana Blast" class="h-40 object-contain transition-transform duration-500 group-hover:scale-110">
                     </div>
                     <span class="text-xs font-extrabold text-juiceGreen uppercase tracking-wider">Smoothies & Shakes</span>
                     <h3 class="text-xl font-black text-gray-900 mt-1 mb-2">Creamy Banana Blast</h3>
@@ -222,13 +205,51 @@
                 </div>
                 <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                     <span class="text-xl font-black text-juiceGreen">Rs. 400</span>
-                    <button onclick="alert('Added to cart!')" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md flex items-center gap-2 cursor-pointer">
+                    <button onclick="addToCart('Creamy Banana Blast', 400)" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md flex items-center gap-2 cursor-pointer">
                         <i class="fa-solid fa-plus"></i> Add to Cart
                     </button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- CART & CHECKOUT MODAL (POPUP) -->
+    <div id="cartModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex justify-center items-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4 border-b pb-3">
+                <h3 class="text-xl font-black text-gray-900"><i class="fa-solid fa-cart-shopping text-juiceGreen mr-2"></i> Your Online Order</h3>
+                <button onclick="toggleCartModal()" class="text-gray-400 hover:text-gray-700 text-lg cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <!-- Cart Items List -->
+            <div id="cartItemsContainer" class="space-y-3 mb-6">
+                <!-- Dynamic items will load here -->
+            </div>
+
+            <!-- Total Price -->
+            <div class="flex justify-between items-center bg-emerald-50 p-4 rounded-2xl mb-6 border border-emerald-100">
+                <span class="font-bold text-sm text-gray-700">Total Amount:</span>
+                <span id="cartTotalPrice" class="text-xl font-black text-juiceGreen">Rs. 0</span>
+            </div>
+
+            <!-- Customer Details Form for Order -->
+            <form onsubmit="checkoutOrder(event)" class="space-y-4">
+                <h4 class="font-bold text-xs uppercase tracking-wider text-gray-700">Delivery Details</h4>
+                <div>
+                    <input type="text" id="custName" placeholder="Your Full Name" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-juiceGreen">
+                </div>
+                <div>
+                    <input type="tel" id="custPhone" placeholder="Phone Number (e.g., 03001234567)" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-juiceGreen">
+                </div>
+                <div>
+                    <textarea id="custAddress" rows="2" placeholder="Delivery Address / Branch Pickup Details" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-juiceGreen"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-juiceGreen hover:bg-juiceDarkGreen text-white font-bold py-3.5 rounded-xl transition shadow-lg uppercase tracking-wider text-xs flex items-center justify-center gap-2 cursor-pointer">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Place Order via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
 
     <footer id="contact" class="bg-juiceDarkGreen text-white py-12 px-4 mt-16">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
