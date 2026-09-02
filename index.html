@@ -90,12 +90,12 @@
     <section id="intro-banner" class="py-12 px-4 max-w-7xl mx-auto">
         <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-red-900/20 bg-black group" data-aos="zoom-in" data-aos-duration="800">
             <div id="sliderTrack" class="flex transition-transform duration-700 ease-in-out w-full">
-                <div class="min-w-full flex-shrink-0"><img src="intro-banner.png" alt="Banner 1" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';"></div>
-                <div class="min-w-full flex-shrink-0"><img src="intro-banner-2.png" alt="Banner 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';"></div>
-                <div class="min-w-full flex-shrink-0"><img src="intro-banner-3.png" alt="Banner 3" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';"></div>
-                <div class="min-w-full flex-shrink-0"><img src="intro-banner-4.png" alt="Banner 4" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';"></div>
-                <div class="min-w-full flex-shrink-0"><img src="intro-banner-5.png" alt="Banner 5" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';"></div>
-                <div class="min-w-full flex-shrink-0"><img src="slide2.jpg" alt="Slide 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';"></div>
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-black"><img src="intro-banner.png" alt="Banner 1" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-contain object-center" onerror="this.src='juice-cup.png';"></div>
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-black"><img src="intro-banner-2.png" alt="Banner 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-contain object-center" onerror="this.src='juice-cup.png';"></div>
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-black"><img src="intro-banner-3.png" alt="Banner 3" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-contain object-center" onerror="this.src='juice-cup.png';"></div>
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-black"><img src="intro-banner-4.png" alt="Banner 4" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-contain object-center" onerror="this.src='juice-cup.png';"></div>
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-black"><img src="intro-banner-5.png" alt="Banner 5" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-contain object-center" onerror="this.src='juice-cup.png';"></div>
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-black"><img src="slide2.png" alt="Slide 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-contain object-center" onerror="this.src='juice-cup.png';"></div>
             </div>
             <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10 cursor-pointer"><i class="fa-solid fa-chevron-left"></i></button>
             <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10 cursor-pointer"><i class="fa-solid fa-chevron-right"></i></button>
@@ -216,8 +216,7 @@
                 <button onclick="toggleCartModal()" class="text-gray-400 hover:text-gray-700 text-lg cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
             </div>
 
-            <div id="cartItemsContainer" class="space-y-3 mb-6">
-                </div>
+            <div id="cartItemsContainer" class="space-y-3 mb-6"></div>
 
             <div class="flex justify-between items-center bg-emerald-50 p-4 rounded-2xl mb-6 border border-emerald-100">
                 <span class="font-bold text-sm text-gray-700">Total Amount:</span>
@@ -285,7 +284,6 @@
     <script>
         AOS.init();
     </script>
-    
     <script src="script.js"></script>
 </body>
 </html>
