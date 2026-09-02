@@ -148,7 +148,6 @@
         </div>
     </section>
 
-    <!-- MENU SECTION WITH WORKING ADD TO CART BUTTONS -->
     <section id="menu" class="py-24 px-4 max-w-7xl mx-auto bg-white rounded-3xl shadow-sm my-8 border border-emerald-100">
         <div class="text-center mb-12" data-aos="fade-down">
             <span class="bg-juiceGreen/10 text-juiceGreen font-extrabold uppercase tracking-widest text-xs px-4 py-2 rounded-full border border-juiceGreen/20">Our Offerings</span>
@@ -157,7 +156,6 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-            <!-- Item 1 -->
             <div class="bg-juiceLight rounded-3xl p-6 shadow-md border border-emerald-100 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
                 <div>
                     <div class="h-52 bg-white rounded-2xl mb-5 flex items-center justify-center overflow-hidden relative group shadow-sm">
@@ -175,7 +173,6 @@
                 </div>
             </div>
 
-            <!-- Item 2 -->
             <div class="bg-juiceLight rounded-3xl p-6 shadow-md border border-emerald-100 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
                 <div>
                     <div class="h-52 bg-white rounded-2xl mb-5 flex items-center justify-center overflow-hidden relative group shadow-sm">
@@ -193,7 +190,6 @@
                 </div>
             </div>
 
-            <!-- Item 3 -->
             <div class="bg-juiceLight rounded-3xl p-6 shadow-md border border-emerald-100 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
                 <div>
                     <div class="h-52 bg-white rounded-2xl mb-5 flex items-center justify-center overflow-hidden relative group shadow-sm">
@@ -213,7 +209,6 @@
         </div>
     </section>
 
-    <!-- CART & CHECKOUT MODAL (POPUP) -->
     <div id="cartModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex justify-center items-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl relative max-h-[90vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-4 border-b pb-3">
@@ -221,18 +216,14 @@
                 <button onclick="toggleCartModal()" class="text-gray-400 hover:text-gray-700 text-lg cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
             </div>
 
-            <!-- Cart Items List -->
             <div id="cartItemsContainer" class="space-y-3 mb-6">
-                <!-- Dynamic items will load here -->
-            </div>
+                </div>
 
-            <!-- Total Price -->
             <div class="flex justify-between items-center bg-emerald-50 p-4 rounded-2xl mb-6 border border-emerald-100">
                 <span class="font-bold text-sm text-gray-700">Total Amount:</span>
                 <span id="cartTotalPrice" class="text-xl font-black text-juiceGreen">Rs. 0</span>
             </div>
 
-            <!-- Customer Details Form for Order -->
             <form onsubmit="checkoutOrder(event)" class="space-y-4">
                 <h4 class="font-bold text-xs uppercase tracking-wider text-gray-700">Delivery Details</h4>
                 <div>
@@ -255,7 +246,19 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
                 <h3 class="text-2xl font-black mb-4">Juice 4 Fun</h3>
-                <p class="text-gray-300 text-xs leading-relaxed">Fresh Looks. Fun Tastes. Bringing absolute freshness and health right to your neighborhood in Karachi.</p>
+                <p class="text-gray-300 text-xs leading-relaxed mb-4">Fresh Looks. Fun Tastes. Bringing absolute freshness and health right to your neighborhood in Karachi.</p>
+                
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="https://www.instagram.com/juice4fun.pk/" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-juiceLime hover:text-juiceDarkGreen text-white flex items-center justify-center transition shadow-md cursor-pointer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1KFkQPUw9T/" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-juiceLime hover:text-juiceDarkGreen text-white flex items-center justify-center transition shadow-md cursor-pointer">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@juice4fun2026" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-juiceLime hover:text-juiceDarkGreen text-white flex items-center justify-center transition shadow-md cursor-pointer">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
             </div>
             <div>
                 <h4 class="font-bold text-sm uppercase tracking-wider text-juiceLime mb-4">Quick Links</h4>
@@ -283,7 +286,6 @@
         AOS.init();
     </script>
     
-    <!-- External JavaScript File Link -->
     <script src="script.js"></script>
 </body>
 </html>
