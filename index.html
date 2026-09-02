@@ -87,15 +87,28 @@
         </div>
     </section>
 
+    <!-- BANNER SLIDER SECTION FIXED -->
     <section id="intro-banner" class="py-12 px-4 max-w-7xl mx-auto">
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-red-900/20 bg-black group" data-aos="zoom-in" data-aos-duration="800">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-emerald-900/10 bg-white group" data-aos="zoom-in" data-aos-duration="800">
             <div id="sliderTrack" class="flex transition-transform duration-700 ease-in-out w-full">
-                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-black"><img src="intro-banner.png" alt="Banner 1" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-contain object-center" onerror="this.src='juice-cup.png';"></div>
-                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-black"><img src="intro-banner-2.png" alt="Banner 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-contain object-center" onerror="this.src='juice-cup.png';"></div>
-                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-black"><img src="intro-banner-3.png" alt="Banner 3" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-contain object-center" onerror="this.src='juice-cup.png';"></div>
-                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-black"><img src="intro-banner-4.png" alt="Banner 4" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-contain object-center" onerror="this.src='juice-cup.png';"></div>
-                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-black"><img src="intro-banner-5.png" alt="Banner 5" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-contain object-center" onerror="this.src='juice-cup.png';"></div>
-                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-black"><img src="slide2.png" alt="Slide 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-contain object-center" onerror="this.src='juice-cup.png';"></div>
+                <div class="min-w-full flex-shrink-0 aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
+                    <img src="intro-banner.png" alt="Banner 1" class="w-full h-full object-cover" onerror="this.src='juice-cup.png';">
+                </div>
+                <div class="min-w-full flex-shrink-0 aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
+                    <img src="intro-banner-2.png" alt="Banner 2" class="w-full h-full object-cover" onerror="this.src='juice-cup.png';">
+                </div>
+                <div class="min-w-full flex-shrink-0 aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
+                    <img src="intro-banner-3.png" alt="Banner 3" class="w-full h-full object-cover" onerror="this.src='juice-cup.png';">
+                </div>
+                <div class="min-w-full flex-shrink-0 aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
+                    <img src="intro-banner-4.png" alt="Banner 4" class="w-full h-full object-cover" onerror="this.src='juice-cup.png';">
+                </div>
+                <div class="min-w-full flex-shrink-0 aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
+                    <img src="intro-banner-5.png" alt="Banner 5" class="w-full h-full object-cover" onerror="this.src='juice-cup.png';">
+                </div>
+                <div class="min-w-full flex-shrink-0 aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
+                    <img src="slide2.png" alt="Slide 2" class="w-full h-full object-cover" onerror="this.src='juice-cup.png';">
+                </div>
             </div>
             <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10 cursor-pointer"><i class="fa-solid fa-chevron-left"></i></button>
             <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10 cursor-pointer"><i class="fa-solid fa-chevron-right"></i></button>
