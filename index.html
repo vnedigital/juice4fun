@@ -92,51 +92,51 @@
             
             <div id="sliderTrack" class="flex transition-transform duration-700 ease-in-out w-full">
                 <div class="min-w-full flex-shrink-0">
-                    <img src="intro-banner.png" alt="Juice 4 Fun Banner 1" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
+                    <img src="intro-banner.png" alt="Banner 1" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
                 </div>
                 <div class="min-w-full flex-shrink-0">
-                    <img src="intro-banner-2.png" alt="Juice 4 Fun Banner 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
+                    <img src="intro-banner-2.png" alt="Banner 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
                 </div>
                 <div class="min-w-full flex-shrink-0">
-                    <img src="intro-banner-3.png" alt="Juice 4 Fun Banner 3" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
+                    <img src="intro-banner-3.png" alt="Banner 3" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
                 </div>
                 <div class="min-w-full flex-shrink-0">
-                    <img src="intro-banner-4.png" alt="Juice 4 Fun Banner 4" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
+                    <img src="intro-banner-4.png" alt="Banner 4" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
                 </div>
                 <div class="min-w-full flex-shrink-0">
-                    <img src="intro-banner-5.png" alt="Juice 4 Fun Banner 5" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
+                    <img src="intro-banner-5.png" alt="Banner 5" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
                 </div>
-                <!-- Nayi Slide (slide2.jpg) yahan add kar di gayi hai -->
                 <div class="min-w-full flex-shrink-0">
-                    <img src="slide2.jpg" alt="Juice 4 Fun Slide 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
+                    <img src="slide2.jpg" alt="Slide 2" class="w-full h-[350px] sm:h-[450px] lg:h-[520px] object-cover object-center" onerror="this.src='juice-cup.png';">
                 </div>
             </div>
 
-            <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10">
+            <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10 cursor-pointer">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
-            <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10">
+            <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10 cursor-pointer">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
 
             <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-                <button onclick="currentSlide(0)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator" data-index="0"></button>
-                <button onclick="currentSlide(1)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator" data-index="1"></button>
-                <button onclick="currentSlide(2)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator" data-index="2"></button>
-                <button onclick="currentSlide(3)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator" data-index="3"></button>
-                <button onclick="currentSlide(4)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator" data-index="4"></button>
-                <button onclick="currentSlide(5)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator" data-index="5"></button>
+                <button onclick="currentSlide(0)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="0"></button>
+                <button onclick="currentSlide(1)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="1"></button>
+                <button onclick="currentSlide(2)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="2"></button>
+                <button onclick="currentSlide(3)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="3"></button>
+                <button onclick="currentSlide(4)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="4"></button>
+                <button onclick="currentSlide(5)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="5"></button>
             </div>
         </div>
     </section>
 
     <script>
         let currentIndex = 0;
-        const totalSlides = 6; // Total slides ab 6 ho gayi hain
+        const totalSlides = 6;
         const track = document.getElementById('sliderTrack');
         const dots = document.querySelectorAll('.dot-indicator');
 
         function updateSlider() {
+            if (!track) return;
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
             dots.forEach((dot, index) => {
                 if(index === currentIndex) {
@@ -169,8 +169,10 @@
 
         // Pause auto-slide on hover
         const bannerContainer = document.querySelector('#intro-banner');
-        bannerContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
-        bannerContainer.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 4000));
+        if (bannerContainer) {
+            bannerContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+            bannerContainer.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 4000));
+        }
 
         // Initial call
         updateSlider();
@@ -235,7 +237,7 @@
                 </div>
                 <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                     <span class="text-xl font-black text-juiceGreen">Rs. 450</span>
-                    <button onclick="alert('Added to cart!')" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md flex items-center gap-2">
+                    <button onclick="alert('Added to cart!')" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md flex items-center gap-2 cursor-pointer">
                         <i class="fa-solid fa-plus"></i> Add to Cart
                     </button>
                 </div>
@@ -252,7 +254,7 @@
                 </div>
                 <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                     <span class="text-xl font-black text-juiceGreen">Rs. 500</span>
-                    <button onclick="alert('Added to cart!')" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md flex items-center gap-2">
+                    <button onclick="alert('Added to cart!')" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md flex items-center gap-2 cursor-pointer">
                         <i class="fa-solid fa-plus"></i> Add to Cart
                     </button>
                 </div>
@@ -269,44 +271,8 @@
                 </div>
                 <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                     <span class="text-xl font-black text-juiceGreen">Rs. 400</span>
-                    <button onclick="alert('Added to cart!')" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md flex items-center gap-2">
+                    <button onclick="alert('Added to cart!')" class="bg-juiceGreen hover:bg-juiceDarkGreen text-white text-xs font-bold px-5 py-3 rounded-full transition shadow-md flex items-center gap-2 cursor-pointer">
                         <i class="fa-solid fa-plus"></i> Add to Cart
                     </button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer id="contact" class="bg-juiceDarkGreen text-white py-12 px-4 mt-16">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-            <div>
-                <h3 class="text-2xl font-black mb-4">Juice 4 Fun</h3>
-                <p class="text-gray-300 text-xs leading-relaxed">Fresh Looks. Fun Tastes. Bringing absolute freshness and health right to your neighborhood in Karachi.</p>
-            </div>
-            <div>
-                <h4 class="font-bold text-sm uppercase tracking-wider text-juiceLime mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-xs text-gray-300">
-                    <li><a href="#home" class="hover:text-white transition">Home</a></li>
-                    <li><a href="#intro-banner" class="hover:text-white transition">Introduction</a></li>
-                    <li><a href="#branches" class="hover:text-white transition">Branches</a></li>
-                    <li><a href="#menu" class="hover:text-white transition">Our Menu</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold text-sm uppercase tracking-wider text-juiceLime mb-4">Contact Us</h4>
-                <p class="text-xs text-gray-300 mb-2"><i class="fa-solid fa-phone mr-2"></i> 0336-2457409</p>
-                <p class="text-xs text-gray-300 mb-1"><i class="fa-solid fa-location-dot mr-2"></i> Lucky One Mall, Karachi</p>
-                <p class="text-xs text-gray-300"><i class="fa-solid fa-location-dot mr-2"></i> Shahrah-e-Faisal Shell Pump, Karachi</p>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto border-t border-emerald-800 mt-8 pt-6 text-center text-xs text-gray-400">
-            &copy; 2026 Juice 4 Fun. All rights reserved.
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-</body>
-</html>
