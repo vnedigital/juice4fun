@@ -1,51 +1,13 @@
-// --- Slider Logic ---
-let currentIndex = 0;
-const totalSlides = 6;
-const track = document.getElementById('sliderTrack');
-const dots = document.querySelectorAll('.dot-indicator');
-
-function updateSlider() {
-    if (!track) return;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    dots.forEach((dot, index) => {
-        if(index === currentIndex) {
-            dot.classList.remove('bg-white/50');
-            dot.classList.add('bg-white', 'w-6');
-        } else {
-            dot.classList.remove('bg-white', 'w-6');
-            dot.classList.add('bg-white/50', 'w-3');
-        }
-    });
-}
-
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateSlider();
-}
-
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateSlider();
-}
-
-function currentSlide(index) {
-    currentIndex = index;
-    updateSlider();
-}
-
-let slideInterval = setInterval(nextSlide, 4000);
-
-const bannerContainer = document.querySelector('#intro-banner');
-if (bannerContainer) {
-    bannerContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
-    bannerContainer.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 4000));
-}
-
-updateSlider();
-
-
-// --- Cart & Checkout System ---
+// --- CART STATE & MANAGEMENT ---
 let cart = [];
+
+function toggleCartModal() {
+    const modal = document.getElementById('cartModal');
+    modal.classList.toggle('hidden');
+    if (!modal.classList.contains('hidden')) {
+        updateCartUI();
+    }
+}
 
 function addToCart(name, price) {
     const existingItem = cart.find(item => item.name === name);
@@ -54,103 +16,158 @@ function addToCart(name, price) {
     } else {
         cart.push({ name, price, quantity: 1 });
     }
-    updateCartUI();
+    updateCartCount();
     
-    // Chota sa notification ya visual feedback
-    showToast(`${name} added to cart!`);
+    // Optional subtle feedback alert or animation can go here
+}
+
+function updateCartCount() {
+    const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+    document.querySelectorAll('.cart-count').forEach(el => {
+        el.textContent = totalCount;
+    });
+}
+
+function changeQuantity(name, amount) {
+    const item = cart.find(i => i.name === name);
+    if (item) {
+        item.quantity += amount;
+        if (item.quantity <= 0) {
+            cart = cart.filter(i => i.name !== name);
+        }
+    }
+    updateCartCount();
+    updateCartUI();
 }
 
 function updateCartUI() {
-    const cartCountElements = document.querySelectorAll('.cart-count');
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartCountElements.forEach(el => el.textContent = totalItems);
-}
-
-function showToast(message) {
-    const toast = document.createElement('div');
-    toast.className = 'fixed bottom-5 right-5 bg-juiceDarkGreen text-white text-xs font-bold px-4 py-3 rounded-2xl shadow-2xl z-50 transition-all duration-300 animate-bounce';
-    toast.innerHTML = `<i class="fa-solid fa-check-circle mr-2 text-juiceLime"></i> ${message}`;
-    document.body.appendChild(toast);
-    setTimeout(() => toast.remove(), 2500);
-}
-
-function toggleCartModal() {
-    const modal = document.getElementById('cartModal');
-    if (!modal) return;
-    if (modal.classList.contains('hidden')) {
-        modal.classList.remove('hidden');
-        renderCartItems();
-    } else {
-        modal.classList.add('hidden');
-    }
-}
-
-function renderCartItems() {
     const container = document.getElementById('cartItemsContainer');
     const totalPriceEl = document.getElementById('cartTotalPrice');
-    if (!container) return;
+    
+    container.innerHTML = '';
 
     if (cart.length === 0) {
-        container.innerHTML = `<p class="text-gray-500 text-xs text-center py-8">Your cart is empty.</p>`;
-        if (totalPriceEl) totalPriceEl.textContent = 'Rs. 0';
+        container.innerHTML = `<p class="text-gray-500 text-xs text-center py-6">Your cart is currently empty.</p>`;
+        totalPriceEl.textContent = 'Rs. 0';
         return;
     }
 
-    let html = '';
-    let total = 0;
+    let totalPrice = 0;
 
-    cart.forEach((item, index) => {
-        let itemTotal = item.price * item.quantity;
-        total += itemTotal;
-        html += `
-            <div class="flex justify-between items-center bg-gray-50 p-3 rounded-xl border border-gray-100">
-                <div>
-                    <h4 class="font-bold text-xs text-gray-900">${item.name}</h4>
-                    <p class="text-[10px] text-gray-500">Rs. ${item.price} x ${item.quantity}</p>
-                </div>
-                <div class="flex items-center gap-3">
-                    <span class="font-black text-xs text-juiceGreen">Rs. ${itemTotal}</span>
-                    <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700 text-xs p-1 cursor-pointer"><i class="fa-solid fa-trash"></i></button>
-                </div>
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        totalPrice += itemTotal;
+
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'flex justify-between items-center bg-gray-50 p-3 rounded-xl border border-gray-100 text-xs';
+        itemDiv.innerHTML = `
+            <div class="flex-1 pr-2">
+                <h5 class="font-bold text-gray-900">${item.name}</h5>
+                <span class="text-juiceGreen font-semibold">Rs. ${item.price} x ${item.quantity}</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <button type="button" onclick="changeQuantity('${item.name}', -1)" class="w-7 h-7 bg-white border border-gray-200 rounded-lg flex items-center justify-center font-bold text-gray-600 hover:bg-gray-100 cursor-pointer">-</button>
+                <span class="font-bold w-4 text-center">${item.quantity}</span>
+                <button type="button" onclick="changeQuantity('${item.name}', 1)" class="w-7 h-7 bg-white border border-gray-200 rounded-lg flex items-center justify-center font-bold text-gray-600 hover:bg-gray-100 cursor-pointer">+</button>
             </div>
         `;
+        container.appendChild(itemDiv);
     });
 
-    container.innerHTML = html;
-    if (totalPriceEl) totalPriceEl.textContent = `Rs. ${total}`;
-}
-
-function removeFromCart(index) {
-    cart.splice(index, 1);
-    updateCartUI();
-    renderCartItems();
+    totalPriceEl.textContent = `Rs. ${totalPrice}`;
 }
 
 function checkoutOrder(event) {
     event.preventDefault();
+
     if (cart.length === 0) {
-        alert('Your cart is empty!');
+        alert('Please add items to your cart before checking out.');
         return;
     }
 
-    const name = document.getElementById('custName').value;
-    const phone = document.getElementById('custPhone').value;
-    const address = document.getElementById('custAddress').value;
+    const name = document.getElementById('custName').value.trim();
+    const phone = document.getElementById('custPhone').value.trim();
+    const address = document.getElementById('custAddress').value.trim();
 
     let orderSummary = `*New Online Order - Juice 4 Fun*%0A`;
+    orderSummary += `----------------------------------%0A`;
     orderSummary += `*Name:* ${name}%0A`;
     orderSummary += `*Phone:* ${phone}%0A`;
-    orderSummary += `*Address:* ${address}%0A%0A*Items:*%0A`;
+    orderSummary += `*Address/Branch:* ${address}%0A`;
+    orderSummary += `----------------------------------%0A`;
+    orderSummary += `*Items Ordered:*%0A`;
 
     let total = 0;
     cart.forEach(item => {
-        orderSummary += `- ${item.name} (x${item.quantity}) : Rs. ${item.price * item.quantity}%0A`;
-        total += item.price * item.quantity;
+        let sub = item.price * item.quantity;
+        total += sub;
+        orderSummary += `- ${item.name} x ${item.quantity} = Rs. ${sub}%0A`;
     });
 
-    orderSummary += `%0A*Total Bill: Rs. ${total}*`;
+    orderSummary += `----------------------------------%0A`;
+    orderSummary += `*Total Amount:* Rs. ${total}%0A`;
 
-    // WhatsApp par order bhejne ke liye (Aap yahan apna number change kar sakte hain)
-    const whatsappUrl = `https://wa.me/923362457409?text=${orderSummary}`;
-    window.open(whatsappUrl, '_blank');
+    // Business WhatsApp Number (0336-2457409 formatted for international link: 923362457409)
+    const whatsappNumber = '923362457409';
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${orderSummary}`;
+
+    window.open(whatsappURL, '_blank');
 }
+
+
+// --- BANNER SLIDER LOGIC ---
+let currentSlideIndex = 0;
+const sliderTrack = document.getElementById('sliderTrack');
+const totalSlides = sliderTrack ? sliderTrack.children.length : 0;
+let slideInterval;
+
+function updateSlider() {
+    if (!sliderTrack) return;
+    sliderTrack.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+    
+    // Update indicator dots
+    document.querySelectorAll('.dot-indicator').forEach((dot, index) => {
+        if (index === currentSlideIndex) {
+            dot.classList.remove('bg-white/50');
+            dot.classList.add('bg-white', 'w-6');
+        } else {
+            dot.classList.remove('bg-white', 'w-6');
+            dot.classList.add('bg-white/50');
+        }
+    });
+}
+
+function nextSlide() {
+    currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+    updateSlider();
+    resetTimer();
+}
+
+function prevSlide() {
+    currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+    updateSlider();
+    resetTimer();
+}
+
+function currentSlide(index) {
+    currentSlideIndex = index;
+    updateSlider();
+    resetTimer();
+}
+
+function startTimer() {
+    slideInterval = setInterval(nextSlide, 4500); // Auto slide every 4.5 seconds
+}
+
+function resetTimer() {
+    clearInterval(slideInterval);
+    startTimer();
+}
+
+// Initialize Slider on Load
+document.addEventListener('DOMContentLoaded', () => {
+    if (totalSlides > 0) {
+        updateSlider();
+        startTimer();
+    }
+});
