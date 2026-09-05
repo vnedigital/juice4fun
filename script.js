@@ -18,7 +18,14 @@ function addToCart(name, price) {
     }
     updateCartCount();
     
-    // Optional subtle feedback alert or animation can go here
+    // Optional visual feedback for adding items
+    const cartBtns = document.querySelectorAll('.cart-count');
+    cartBtns.forEach(el => {
+        el.classList.add('scale-125', 'bg-juiceLime');
+        setTimeout(() => {
+            el.classList.remove('scale-125', 'bg-juiceLime');
+        }, 300);
+    });
 }
 
 function updateCartCount() {
@@ -128,11 +135,11 @@ function updateSlider() {
     // Update indicator dots
     document.querySelectorAll('.dot-indicator').forEach((dot, index) => {
         if (index === currentSlideIndex) {
-            dot.classList.remove('bg-white/50');
-            dot.classList.add('bg-white', 'w-6');
+            dot.classList.remove('bg-black/30');
+            dot.classList.add('bg-juiceGreen', 'w-6');
         } else {
-            dot.classList.remove('bg-white', 'w-6');
-            dot.classList.add('bg-white/50');
+            dot.classList.remove('bg-juiceGreen', 'w-6');
+            dot.classList.add('bg-black/30');
         }
     });
 }
