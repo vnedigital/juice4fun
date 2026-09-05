@@ -88,36 +88,45 @@
     </section>
 
     <section id="intro-banner" class="py-12 px-4 max-w-7xl mx-auto">
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-emerald-900/10 bg-white group" data-aos="zoom-in" data-aos-duration="800">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-emerald-900/10 bg-juiceLight group" data-aos="zoom-in" data-aos-duration="800">
             <div id="sliderTrack" class="flex transition-transform duration-700 ease-in-out w-full">
-                <div class="min-w-full flex-shrink-0 aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
-                    <img src="intro-banner.png" alt="Banner 1" class="w-full h-full object-cover" onerror="this.src='juice-cup.png';">
+                
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight">
+                    <img src="intro-banner.png" alt="Banner 1" class="w-full h-auto max-h-[500px] object-contain" onerror="this.src='juice-cup.png';">
                 </div>
-                <div class="min-w-full flex-shrink-0 aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
-                    <img src="intro-banner-2.png" alt="Banner 2" class="w-full h-full object-cover" onerror="this.src='juice-cup.png';">
+                
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight">
+                    <img src="intro-banner-2.png" alt="Banner 2" class="w-full h-auto max-h-[500px] object-contain" onerror="this.src='juice-cup.png';">
                 </div>
-                <div class="min-w-full flex-shrink-0 aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
-                    <img src="intro-banner-3.png" alt="Banner 3" class="w-full h-full object-cover" onerror="this.src='juice-cup.png';">
+                
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight">
+                    <img src="intro-banner-3.png" alt="Banner 3" class="w-full h-auto max-h-[500px] object-contain" onerror="this.src='juice-cup.png';">
                 </div>
-                <div class="min-w-full flex-shrink-0 aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
-                    <img src="intro-banner-4.png" alt="Banner 4" class="w-full h-full object-cover" onerror="this.src='juice-cup.png';">
+                
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight">
+                    <img src="intro-banner-4.png" alt="Banner 4" class="w-full h-auto max-h-[500px] object-contain" onerror="this.src='juice-cup.png';">
                 </div>
-                <div class="min-w-full flex-shrink-0 aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
-                    <img src="intro-banner-5.png" alt="Banner 5" class="w-full h-full object-cover" onerror="this.src='juice-cup.png';">
+                
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight">
+                    <img src="intro-banner-5.png" alt="Banner 5" class="w-full h-auto max-h-[500px] object-contain" onerror="this.src='juice-cup.png';">
                 </div>
-                <div class="min-w-full flex-shrink-0 aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
-                    <img src="slide2.png" alt="Slide 2" class="w-full h-full object-cover" onerror="this.src='juice-cup.png';">
+                
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight">
+                    <img src="slide2.png" alt="Slide 2" class="w-full h-auto max-h-[500px] object-contain" onerror="this.src='juice-cup.png';">
                 </div>
+
             </div>
+            
             <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10 cursor-pointer"><i class="fa-solid fa-chevron-left"></i></button>
             <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-juiceGreen text-white w-10 h-10 rounded-full flex items-center justify-center transition opacity-0 group-hover:opacity-100 shadow-lg z-10 cursor-pointer"><i class="fa-solid fa-chevron-right"></i></button>
+            
             <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-                <button onclick="currentSlide(0)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="0"></button>
-                <button onclick="currentSlide(1)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="1"></button>
-                <button onclick="currentSlide(2)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="2"></button>
-                <button onclick="currentSlide(3)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="3"></button>
-                <button onclick="currentSlide(4)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="4"></button>
-                <button onclick="currentSlide(5)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition dot-indicator cursor-pointer" data-index="5"></button>
+                <button onclick="currentSlide(0)" class="w-3 h-3 rounded-full bg-black/30 hover:bg-juiceGreen transition dot-indicator cursor-pointer" data-index="0"></button>
+                <button onclick="currentSlide(1)" class="w-3 h-3 rounded-full bg-black/30 hover:bg-juiceGreen transition dot-indicator cursor-pointer" data-index="1"></button>
+                <button onclick="currentSlide(2)" class="w-3 h-3 rounded-full bg-black/30 hover:bg-juiceGreen transition dot-indicator cursor-pointer" data-index="2"></button>
+                <button onclick="currentSlide(3)" class="w-3 h-3 rounded-full bg-black/30 hover:bg-juiceGreen transition dot-indicator cursor-pointer" data-index="3"></button>
+                <button onclick="currentSlide(4)" class="w-3 h-3 rounded-full bg-black/30 hover:bg-juiceGreen transition dot-indicator cursor-pointer" data-index="4"></button>
+                <button onclick="currentSlide(5)" class="w-3 h-3 rounded-full bg-black/30 hover:bg-juiceGreen transition dot-indicator cursor-pointer" data-index="5"></button>
             </div>
         </div>
     </section>
