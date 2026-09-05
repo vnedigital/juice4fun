@@ -22,6 +22,21 @@
             }
         }
     </script>
+    <style>
+        /* Mobile responsiveness fix for slider images & containers */
+        @media (max-width: 768px) {
+            #intro-banner img {
+                max-height: 280px !important;
+                object-fit: contain !important;
+            }
+        }
+        #sliderTrack img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;
+        }
+    </style>
 </head>
 <body class="bg-juiceLight text-gray-800 font-sans antialiased selection:bg-juiceGreen selection:text-white overflow-x-hidden">
 
@@ -91,27 +106,27 @@
         <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-emerald-900/10 bg-juiceLight group" data-aos="zoom-in" data-aos-duration="800">
             <div id="sliderTrack" class="flex transition-transform duration-700 ease-in-out w-full">
                 
-                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight">
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight p-2">
                     <img src="intro-banner.png" alt="Banner 1" class="w-full h-auto max-h-[500px] object-contain" onerror="this.src='juice-cup.png';">
                 </div>
                 
-                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight">
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight p-2">
                     <img src="intro-banner-2.png" alt="Banner 2" class="w-full h-auto max-h-[500px] object-contain" onerror="this.src='juice-cup.png';">
                 </div>
                 
-                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight">
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight p-2">
                     <img src="intro-banner-3.png" alt="Banner 3" class="w-full h-auto max-h-[500px] object-contain" onerror="this.src='juice-cup.png';">
                 </div>
                 
-                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight">
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight p-2">
                     <img src="intro-banner-4.png" alt="Banner 4" class="w-full h-auto max-h-[500px] object-contain" onerror="this.src='juice-cup.png';">
                 </div>
                 
-                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight">
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight p-2">
                     <img src="intro-banner-5.png" alt="Banner 5" class="w-full h-auto max-h-[500px] object-contain" onerror="this.src='juice-cup.png';">
                 </div>
                 
-                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight">
+                <div class="min-w-full flex-shrink-0 flex items-center justify-center bg-juiceLight p-2">
                     <img src="slide2.png" alt="Slide 2" class="w-full h-auto max-h-[500px] object-contain" onerror="this.src='juice-cup.png';">
                 </div>
 
